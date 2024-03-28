@@ -1,0 +1,474 @@
+[
+  {
+    "repoFilesystem": "REPO_3MENERGETICA",
+    "tenant": "?",
+    "ligeroOrg": "3M ENERGETICA LTDA",
+    "email": "3menergetica.backup@silastech.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_ADUFERTIL",
+    "tenant": "ADUFERTIL",
+    "ligeroOrg": "ADUFERTIL",
+    "email": "gabriel.guimaraes@adufertil.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_ALL4LABELS",
+    "tenant": "ALL4LABELS",
+    "ligeroOrg": "ALL4LABELS",
+    "email": "DL_BR_Monitoring_Infra@all4labels.com",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_ALL4LABELS_FLEXOPRINT",
+    "tenant": "ALL4LABELS FLEXOPRINT",
+    "ligeroOrg": "ALL4LABELS",
+    "email": "DL_BR_Monitoring_Infra@all4labels.com",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_ALL4LABELS_LABELPRESS",
+    "tenant": "ALL4LABELS LABEL PRESS",
+    "ligeroOrg": "ALL4LABELS",
+    "email": "DL_BR_Monitoring_Infra@all4labels.com",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_ALL4LABELS_S2",
+    "tenant": "ALL4LABELS ARG-MEX S2",
+    "ligeroOrg": "ALL4LABELS",
+    "email": "DL_BR_Monitoring_Infra@all4labels.com",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_ALL4LABELSBRASIL",
+    "tenant": "ALL4LABELSBRA",
+    "ligeroOrg": "ALL4LABELS",
+    "email": "DL_BR_Monitoring_Infra@all4labels.com",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_ALL4LABELSFLEXOPRINTS2",
+    "tenant": "ALL4LABELS FLEXOPRINT S2",
+    "ligeroOrg": "ALL4LABELS",
+    "email": "DL_BR_Monitoring_Infra@all4labels.com",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_ALL4LABELSLABELPRESSS2",
+    "tenant": "ALL4LABELS LABEL PRESS S2",
+    "ligeroOrg": "ALL4LABELS",
+    "email": "DL_BR_Monitoring_Infra@all4labels.com",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_ALTENBURG",
+    "tenant": "ALTENBURG",
+    "ligeroOrg": "ALTENBURG",
+    "email": "renato.uessler@altenburg.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_CS3K_ANAGE",
+    "tenant": "ANAGE",
+    "ligeroOrg": "ANAG�",
+    "email": "ti@anageimoveis.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_ARCOIRIS",
+    "tenant": "ARCO IRIS",
+    "ligeroOrg": "ARCOIRIS",
+    "email": "leonardo@arcoirislavanderia.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_ATB",
+    "tenant": "ARTABAS",
+    "ligeroOrg": "ARTABAS",
+    "email": "luan.crevelin@artabas.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_BLUMENAU_ILUMINACAO",
+    "tenant": "BLUMENAU ILUMINACAO",
+    "ligeroOrg": "BLUMENAU ILUMINA��O",
+    "email": "gabriel.d@blumenau.ind.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_CAMINHOVEICULOS",
+    "tenant": "CAMINHO VEICULOS",
+    "ligeroOrg": "CAMINHO AUTOMOVEIS",
+    "email": "ti@caminhoveiculos.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_CAPERE",
+    "tenant": "?",
+    "ligeroOrg": "CAPERE",
+    "email": "christian.debovi@capere.inf.br",
+    "service": "Servidor"
+  },
+  {
+    "repoFilesystem": "REPO_CARTORIOCAR",
+    "tenant": "CARTORIO CARMOPOLIS",
+    "ligeroOrg": "CART�RIO CARMOPOLIS DE MINAS",
+    "email": "cartoriocarlos.backup@silastech.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_CARTORIONEREU",
+    "tenant": "OLIVEIRA CARTORIO",
+    "ligeroOrg": "CARTORIO NEREU",
+    "email": "cartoriocida.backup@silastech.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_CATIVA",
+    "tenant": "CATIVA",
+    "ligeroOrg": "CATIVA TEXTIL",
+    "email": "luan.raitz@cativa.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_CELCOIN",
+    "tenant": "CELCOIN",
+    "ligeroOrg": "CELCOIN",
+    "email": "servicedesk@celcoin.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_CMJS",
+    "tenant": "CMJS",
+    "ligeroOrg": "CMJS",
+    "email": "regis@jaraguadosul.sc.leg.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_CONSISTEM",
+    "tenant": "CONSISTEM",
+    "ligeroOrg": "CONSISTEM SISTEMAS LTDA",
+    "email": "infraestrutura@consistem.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_COPAGRIL",
+    "tenant": "COPAGRIL",
+    "ligeroOrg": "COPAGRIL",
+    "email": "suporte@copagril.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_CORERS",
+    "tenant": "CORE RS",
+    "ligeroOrg": "CORE-RS",
+    "email": "informatica@core-rs.org.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_DOCOL",
+    "tenant": "DOCOL",
+    "ligeroOrg": "DOCOL",
+    "email": "monitoramentodocol@docol.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_EKONOVA",
+    "tenant": "EKONOVA",
+    "ligeroOrg": "EKONOVA",
+    "email": "ti@ekonova.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_FACTA",
+    "tenant": "FACTA",
+    "ligeroOrg": "FACTA",
+    "email": "coordenacao@factagestao.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_GBOEX",
+    "tenant": "GBOEX",
+    "ligeroOrg": "GBOEX",
+    "email": "martins@gboex.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_GOTAQUIMICA",
+    "tenant": "GOTAQUIMICA",
+    "ligeroOrg": "GOTAQUIMICA",
+    "email": "ti@gotaquimica.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_HOSPITALJARAGUA",
+    "tenant": "HOSPITALJARAGUA",
+    "ligeroOrg": "Hospital Jaragu�",
+    "email": "carine@hospitaljaragua.org.br",
+    "service": "?"
+  },
+  {
+    "repoFilesystem": "REPO_FISCHER",
+    "tenant": "IRMAOS FISCHER",
+    "ligeroOrg": "IRMAOS FISCHER",
+    "email": "veeamfischer@fischer.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_KFG",
+    "tenant": "KFG",
+    "ligeroOrg": "KFG",
+    "email": "antonio.pontes@kfgdistribuidora.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_LBD",
+    "tenant": "LATICINIOS",
+    "ligeroOrg": "LATICINIOS BOM DESTINO",
+    "email": "bomdestino.backup@silastech.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_LOBODERIZZO",
+    "tenant": "LOBO DE RIZZO",
+    "ligeroOrg": "Lobo & De Rizzo",
+    "email": "juliano.silva@ldr.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_LLV",
+    "tenant": "LUCIMAR LUCENA VIANA",
+    "ligeroOrg": "LUCIMAR LUCENA VIANA",
+    "email": "sitiodaserra.backup@silastech.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_MALWEE",
+    "tenant": "MALWEE",
+    "ligeroOrg": "MALWEE",
+    "email": "alessandro.lindemann@malwee.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_CS3K_MARVI",
+    "tenant": "MARVI",
+    "ligeroOrg": "MARVI",
+    "email": "coordenacao.ti1@marvi.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_MEC",
+    "tenant": "?",
+    "ligeroOrg": "MEC",
+    "email": "arthur.cavalcante@trescal.com",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_MEGALABSFARMACEUTICA",
+    "tenant": "MEGALABS FARMACEUTICA S.A",
+    "ligeroOrg": "MEGALABS",
+    "email": "bruno.alves@megalabsbrasil.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": [
+      "REPO_RSL",
+      "REPO_RIOSULENSE"
+    ],
+    "tenant": "METALURGICA RIO SULENSE",
+    "ligeroOrg": "METALURGICA RIOSULENSE S/A",
+    "email": "gleison@riosulense.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_FRS",
+    "tenant": "FLORENSE",
+    "ligeroOrg": "M�VEIS FLORENSE",
+    "email": "cleo@florense.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_OMNICOTTON",
+    "tenant": "OMNICOTTON",
+    "ligeroOrg": "OMNICOTTON",
+    "email": "crezende@omnicotton.com",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_PAMPLONA",
+    "tenant": "PAMPLONA",
+    "ligeroOrg": "PAMPLONA",
+    "email": "eventos@pamplona.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_PRIMATO",
+    "tenant": "?",
+    "ligeroOrg": "PRIMATO",
+    "email": "suporte@primato.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_ITAAS01",
+    "tenant": "ITAAS01",
+    "ligeroOrg": "SERCOMPE IT SERVICES",
+    "email": "internalmanage@sercompe.com.br",
+    "service": "Veeam"
+  },
+  {
+    "repoFilesystem": "REPO_SERCOMPE",
+    "tenant": "SERCOMPE",
+    "ligeroOrg": "SERCOMPE IT SERVICES",
+    "email": "internalmanage@sercompe.com.br",
+    "service": "Veeam"
+  },
+  {
+    "repoFilesystem": "REPO_SLALIMENTOS",
+    "tenant": "SL Alimentos",
+    "ligeroOrg": "SL ALIMENTOS",
+    "email": "ti@slpart.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_SOMA",
+    "tenant": "SOMA URBANISMO",
+    "ligeroOrg": "SOMA URBANISMO S/A",
+    "email": "suporte@somaurbanismo.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_TECADI",
+    "tenant": "TECADI",
+    "ligeroOrg": "TECADI",
+    "email": "luiz.poleza@tecadi.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_TSC",
+    "tenant": "ACTVS",
+    "ligeroOrg": "TSC",
+    "email": "johann.moraes@totvs.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_UNIMEDANAPOLIS",
+    "tenant": "UNIMED ANAPOLIS",
+    "ligeroOrg": "UNIMED ANAPOLIS",
+    "email": "ti@unimedanapolis.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_UNIMEDARAGUAINA",
+    "tenant": "UNIMED ARAGUAINA",
+    "ligeroOrg": "UNIMED ARAGUAINA",
+    "email": "ti@unimedaraguaina.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_UNIMEDFED",
+    "tenant": "UNIMED FEDERACAO CENTRO",
+    "ligeroOrg": "UNIMED FEDERA��O",
+    "email": "andre.barretos@unimedcb.coop.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_UNIMEDFEDERACAO",
+    "tenant": "UNIMED FEDERACAO CENTRO",
+    "ligeroOrg": "UNIMED FEDERA��O",
+    "email": "andre.barretos@unimedcb.coop.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_UNIMEDMIN",
+    "tenant": "UNIMED MINEIROS",
+    "ligeroOrg": "UNIMED MINEIROS",
+    "email": "ti@unimedmineiros.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_UNIMEDMINEIROS",
+    "tenant": "UNIMED MINEIROS",
+    "ligeroOrg": "UNIMED MINEIROS",
+    "email": "ti@unimedmineiros.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_UNIMEDMORRINHOS",
+    "tenant": "UNIMED MORRINHOS",
+    "ligeroOrg": "UNIMED MORRINHOS",
+    "email": "ti@unimedmorrinhos.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_UNIMEDPALMAS",
+    "tenant": "UNIMED PALMAS",
+    "ligeroOrg": "UNIMED PALMAS",
+    "email": "alziro@unimedpalmas.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_UNIVALI",
+    "tenant": "UNIVALI",
+    "ligeroOrg": "UNIVALI",
+    "email": "gomes@univali.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_LVA",
+    "tenant": "LATICINIOSVAIDOSA",
+    "ligeroOrg": "VAIDOSA",
+    "email": "vaidosa.backup@silastech.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_VEDAMOTORS",
+    "tenant": "VEDAMOTORS",
+    "ligeroOrg": "VEDAMOTORS",
+    "email": "Jeferson.marchi@vedamotors.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_VULCABRAS",
+    "tenant": "VULCABRAS",
+    "ligeroOrg": "VULCABRAS",
+    "email": "infraestrutura@vulcabras.com",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_SEMAE_WELT",
+    "tenant": "SEMAE-WELT",
+    "ligeroOrg": "WELTSOLUTIONS",
+    "email": "bergson.rodrigues@weltsolutions.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_ZAGONEL",
+    "tenant": "ZAGONEL",
+    "ligeroOrg": "ZAGONEL",
+    "email": "juliano@zagonel.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_COOPENSINOOURINHOS",
+    "tenant": "COOPERATIVA ENSINO OURINHOS",
+    "ligeroOrg": "Cooperativa de Ensino de Ourinhos",
+    "email": "fjcomputadores@hotmail.com",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_SOMALOGISTICA",
+    "tenant": " SOMA LOGISTICA",
+    "ligeroOrg": "SOMA LOGISTICA",
+    "email": "Informatica@somalogistica.com.br",
+    "service": "Backup"
+  },
+  {
+    "repoFilesystem": "REPO_AGRONORTE",
+    "tenant": " Agro Norte Pesquisa e Sementes",
+    "ligeroOrg": "AGRO NORTE",
+    "email": "juridico@agronorte.com.br",
+    "service": "Backup"
+  }
+]
