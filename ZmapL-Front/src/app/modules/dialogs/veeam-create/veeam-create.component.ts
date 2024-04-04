@@ -30,6 +30,7 @@ export class VeeamCreateComponent {
   ngOnInit() {
     this.formGroup = this.formBuilder.group({
       veeamRepoFilesystem: [''],
+      veeamTenant: [''],
       veeamAcronym: [''],
       ligeroCustomerId: [''],
       ligeroEmail: [''],

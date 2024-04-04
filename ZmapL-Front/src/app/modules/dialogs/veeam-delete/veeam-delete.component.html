@@ -15,39 +15,45 @@
   <div class="formDiv">
     <table>
       <tr>
-        <td class="formName">ID: </td>
+        <td class="formName">ID:</td>
         <td class="formData">
-          {{getData()!.id}}
+          {{ getData()!.id }}
         </td>
       </tr>
       <tr>
-        <td class="formName">Veeam Repository: </td>
+        <td class="formName">Veeam Repository:</td>
         <td class="formData">
-          {{getData()!.VeeamRepoFilesystem}}
+          {{ getData()!.VeeamRepoFilesystem }}
+        </td>
+      </tr>
+      <tr>
+        <td class="formName">Veeam Tenant:</td>
+        <td class="formData">
+          {{ getData()!.VeeamTenant }}
         </td>
       </tr>
       <tr>
         <td class="formName">Prefixo do Cliente:</td>
         <td class="formData">
-          {{getData()!.VeeamAcronym}}
+          {{ getData()!.VeeamAcronym }}
         </td>
       </tr>
       <tr>
         <td class="formName">Ligero Customer ID:</td>
         <td class="formData">
-          {{getData()!.LigeroCustomerId}}
+          {{ getData()!.LigeroCustomerId }}
         </td>
       </tr>
       <tr>
         <td class="formName">Ligero E-mail:</td>
         <td class="formData">
-          {{getData()!.LigeroEmail}}
+          {{ getData()!.LigeroEmail }}
         </td>
       </tr>
       <tr>
         <td class="formName">Ligero Serviço:</td>
         <td class="formData">
-          {{getData()!.LigeroService}}
+          {{ getData()!.LigeroService }}
         </td>
       </tr>
     </table>

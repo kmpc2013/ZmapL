@@ -35,6 +35,7 @@ export class VeeamDeleteComponent {
     this.formGroup = this.formBuilder.group({
       id: this.getData()!.id,
       veeamRepoFilesystem: this.getData()!.VeeamRepoFilesystem,
+      veeamTenant: this.getData()!.VeeamTenant,
       veeamAcronym: this.getData()!.VeeamAcronym,
       ligeroCustomerId: this.getData()!.LigeroCustomerId,
       ligeroEmail: this.getData()!.LigeroEmail,

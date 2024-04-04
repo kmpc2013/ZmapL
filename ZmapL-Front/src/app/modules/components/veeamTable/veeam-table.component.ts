@@ -14,9 +14,10 @@ import { MatDividerModule } from '@angular/material/divider';
 import { VeeamEditComponent } from '../../dialogs/veeam-edit/veeam-edit.component';
 import { EDialogPanelClass } from '../../enum/EDialogPanelClass.enum';
 import { VeeamDeleteComponent } from '../../dialogs/veeam-delete/veeam-delete.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-veeam',
+  selector: 'app-veeam-table',
   standalone: true,
   imports: [
     MatButtonModule,
@@ -27,18 +28,22 @@ import { VeeamDeleteComponent } from '../../dialogs/veeam-delete/veeam-delete.co
     MatPaginatorModule,
     MatDividerModule,
     MatIconModule,
+    CommonModule
   ],
-  templateUrl: './veeam.component.html',
-  styleUrl: './veeam.component.scss',
+  templateUrl: './veeam-table.component.html',
+  styleUrl: './veeam-table.component.scss',
 })
-export class VeeamComponent {
+export class VeeamTableComponent {
   public arrayVeeamALL: IVeeamMap[] = [];
   public arrayVeeamFiltered: IVeeamMap[] = [];
 
   constructor(public dialog: MatDialog, private backService: BackService) {}
 
   getVeeamMap() {
-    this.backService.getVeeamMap().subscribe((data: IVeeamMap[]) => {
+    this.backService.getVeeamMap().subscribe((data: IVeeamMap[]) => {  
+      for(var i in data){
+        data[i].ChangedAt = new Date(data[i].ChangedAt);
+      };
       this.arrayVeeamALL = data;
       this.arrayVeeamFiltered = this.arrayVeeamALL;
     });
@@ -47,10 +52,23 @@ export class VeeamComponent {
   ngOnInit() {
     this.getVeeamMap();
   }
+  
+  search(e: Event) {
+    const target = e.target as HTMLInputElement;
+    const value = target.value.toLowerCase();
+  
+    this.arrayVeeamFiltered = this.arrayVeeamALL.filter((item) => {
+      return Object.values(item).some((val) =>
+        typeof val === 'string' && val.toLowerCase().includes(value)
+      );
+    });
+  }
 
-  public openDialogVeeamCreate() {
+  public openDialogVeeamCreate(event: Event) {
+    event.preventDefault();
     this.dialog.open(VeeamCreateComponent, {
       panelClass: EDialogPanelClass.PROJECTS,
+      width: '700px',
     });
   }
 
@@ -58,6 +76,7 @@ export class VeeamComponent {
     this.dialog.open(VeeamEditComponent, {
       data,
       panelClass: EDialogPanelClass.PROJECTS,
+      width: '700px',
     });
   }
 

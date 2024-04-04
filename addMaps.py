@@ -1,4 +1,11 @@
-[
+import requests
+import json
+
+# URL da API
+url = "http://localhost:3000/api/veeam"
+
+# JSON de entrada
+data = [
   {
     "repoFilesystem": "REPO_3MENERGETICA",
     "tenant": "?",
@@ -536,3 +543,24 @@
     "service": "Backup"
   }
 ]
+
+# Iterando sobre cada entrada no JSON
+for entry in data:
+    # Convertendo a entrada para o formato esperado pela API
+    payload = json.dumps({
+        "veeamRepoFilesystem": entry["repoFilesystem"],
+        "veeamTenant": entry["tenant"],
+        "veeamAcronym": entry["veeamAcronym"],
+        "ligeroCustomerId": entry["ligeroOrg"],
+        "ligeroEmail": entry["email"],
+        "ligeroService": entry["service"]
+    })
+
+    # Enviando a requisição POST para a API
+    response = requests.post(url, headers={'Content-Type': 'application/json'}, data=payload)
+
+    # Verificando o código de status da resposta
+    if response.status_code == 200:
+        print("Entrada adicionada com sucesso via API")
+    else:
+        print(f"Falha ao adicionar entrada via API: {response.text}")

@@ -6,12 +6,12 @@ const getAll = async () => {
 };
 
 const createEntry = async (body) => {
-  const { veeamRepoFilesystem, veeamAcronym, ligeroCustomerId, ligeroEmail, ligeroService } = body;
+  const { veeamRepoFilesystem, veeamTenant, veeamAcronym, ligeroCustomerId, ligeroEmail, ligeroService } = body;
   const dateUTC = new Date(Date.now()).toUTCString();
   const query =
-    "INSERT INTO veeam(VeeamRepoFilesystem, VeeamAcronym, LigeroCustomerId, LigeroEmail, LigeroService, changedAt) VALUES (?, ?, ?, ?, ?, ?)";
+    "INSERT INTO veeam(VeeamRepoFilesystem, VeeamTenant, VeeamAcronym, LigeroCustomerId, LigeroEmail, LigeroService, changedAt) VALUES (?, ?, ?, ?, ?, ?, ?)";
   const [createdTask] = await conn.execute(query, [
-    veeamRepoFilesystem, veeamAcronym, ligeroCustomerId, ligeroEmail, ligeroService, dateUTC,
+    veeamRepoFilesystem, veeamTenant, veeamAcronym, ligeroCustomerId, ligeroEmail, ligeroService, dateUTC,
   ]);
   return { insertId: createdTask.insertId };
 };
@@ -22,11 +22,11 @@ const deleteEntry = async (id) => {
 };
 
 const updateEntry = async (id, task) => {
-  const { veeamRepoFilesystem, veeamAcronym, ligeroCustomerId, ligeroEmail, ligeroService } = task;
+  const { veeamRepoFilesystem, veeamTenant, veeamAcronym, ligeroCustomerId, ligeroEmail, ligeroService } = task;
   const dateUTC = new Date(Date.now()).toUTCString();
   const query =
-    "UPDATE veeam SET VeeamRepoFilesystem = ?,  VeeamAcronym = ?,  LigeroCustomerId = ?,  LigeroEmail = ?,  LigeroService = ?,  changedAt = ? WHERE id = ?";
-  const [updateDoc] = await conn.execute(query, [veeamRepoFilesystem, veeamAcronym, ligeroCustomerId, ligeroEmail, ligeroService, dateUTC, id,]);
+    "UPDATE veeam SET VeeamRepoFilesystem = ?, VeeamTenant = ?, VeeamAcronym = ?,  LigeroCustomerId = ?,  LigeroEmail = ?,  LigeroService = ?,  changedAt = ? WHERE id = ?";
+  const [updateDoc] = await conn.execute(query, [veeamRepoFilesystem, veeamTenant, veeamAcronym, ligeroCustomerId, ligeroEmail, ligeroService, dateUTC, id,]);
   return updateDoc;
 };
 

@@ -2,7 +2,7 @@ const validateFieldVeeam = (req, res, next) => {
     const { body } = req;
 
     // veeamRepoFilesystem
-    if (body.veeamRepoFilesystem.trim().length > 25) {
+    if (body.veeamRepoFilesystem.trim().length > 100) {
         return res.status(400).json({ message: 'The field "veeamRepoFilesystem" is to long' });
     }
 
