@@ -6,9 +6,9 @@ networks:
     driver: bridge
 
 services:
-  database:
+  ZmapL_database:
     image: mysql
-    container_name: database
+    container_name: ZmapL_database
     restart: on-failure
     environment:
       MYSQL_ROOT_PASSWORD: root

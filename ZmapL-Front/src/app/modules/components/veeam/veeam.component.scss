@@ -1,0 +1,18 @@
+.divTable {
+  margin: 15px;
+}
+.buttomNewMap {
+    display: flex;
+    margin: 15px;
+    float: right;
+}
+.tableValues td {
+  vertical-align: middle;
+  button {
+    height: 25px;
+    font-size: 13px;
+    vertical-align: center;
+    padding: 2px 10px 2px 10px;
+    margin: 5px;
+  }
+}

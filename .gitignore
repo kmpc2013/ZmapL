@@ -1,7 +1,11 @@
+# root
+others/mysql
+
+# ZmapL-Back
 ZmapL-Back/node_modules
-ZmapL-Back/others/mysql
 ZmapL-Back/.env
 
+# ZmapL-Front
 ZmapL-Front/node_modules
 ZmapL-Front/.angular
 ZmapL-Front/.vscode
