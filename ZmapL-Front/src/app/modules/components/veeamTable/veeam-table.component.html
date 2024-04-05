@@ -27,7 +27,11 @@
           placeholder="Buscar documento"
           (input)="search($event)"
         />
-        <a href="https://servicedesk.sercompe.com.br/otrs/index.pl?Action=AgentFAQZoom;ItemID=401" target="_blank">Ajuda</a>
+        <a
+          href="https://servicedesk.sercompe.com.br/otrs/index.pl?Action=AgentFAQZoom;ItemID=401"
+          target="_blank"
+          >Ajuda</a
+        >
         <button
           class="buttomNewMap btn btn-primary"
           color="primary"
@@ -45,15 +49,29 @@
   >
     <thead>
       <tr>
-        <th style="background-color: #90CAE1;">id</th>
-        <th style="background-color: #95DEB7;">Veeam Repository</th>
-        <th style="background-color: #95DEB7;">Veeam Tenant</th>
-        <th style="background-color: #95DEB7;">Prefixo do Cliente</th>
-        <th style="background-color: #AA95DE;">Ligero Customer ID</th>
-        <th style="background-color: #AA95DE;">Ligero E-mail</th>
-        <th style="background-color: #AA95DE;">Ligero Serviço</th>
-        <th style="background-color: #90CAE1;">Última Alteração</th>
-        <th style="background-color: #90CAE1;">Opções</th>
+        <th style="background-color: #90cae1">id</th>
+        <th
+          (click)="getVeeamMap('VeeamRepoFilesystem')"
+          style="background-color: #95deb7"
+        >
+          Veeam Repository<span *ngIf="key == 'VeeamRepoFilesystem'">{{
+            reverse ? "▲" : "▼"
+          }}</span>
+        </th>
+        <th
+          (click)="getVeeamMap('VeeamTenant')"
+          style="background-color: #95deb7"
+        >
+          Veeam Tenant<span *ngIf="key == 'VeeamTenant'">{{
+            reverse ? "▲" : "▼"
+          }}</span>
+        </th>
+        <th style="background-color: #95deb7">Prefixo do Cliente</th>
+        <th style="background-color: #aa95de">Ligero Customer ID</th>
+        <th style="background-color: #aa95de">Ligero E-mail</th>
+        <th style="background-color: #aa95de">Ligero Serviço</th>
+        <th style="background-color: #90cae1">Última Alteração</th>
+        <th style="background-color: #90cae1">Opções</th>
       </tr>
     </thead>
     @for(item of arrayVeeamFiltered; track item;){

@@ -12,8 +12,8 @@ services:
     restart: on-failure
     environment:
       MYSQL_ROOT_PASSWORD: root
-    # ports:
-    #   - 3306:3306
+    ports:
+      - 3306:3306
     networks:
       - zmapl
     volumes:
@@ -28,14 +28,14 @@ services:
           memory: 50M
 
   zmaplback:
-    #build: ./ZmapL-Back
+    build: ./ZmapL-Back
     image: kmpc2013/zmaplback:v1
     container_name: zmaplback
     restart: on-failure
     environment:
       NODE_ENV: production
-    # ports:
-    #   - 3333:3000
+    ports:
+      - 3333:3000
     networks:
       - zmapl
     depends_on:
@@ -47,22 +47,22 @@ services:
         reservations:
           memory: 50M
   
-  zmaplfront:
-    #build: ./ZmapL-Front
-    image: kmpc2013/zmaplfront:v1
-    container_name: zmaplfront
-    restart: on-failure
-    environment:
-      NODE_ENV: production
-    ports:
-      - 8081:80
-    networks:
-      - zmapl
-    depends_on:
-      - "zmaplback"
-    deploy:
-      resources:
-        limits:
-          memory: 100M
-        reservations:
-          memory: 50M
+  # zmaplfront:
+  #   build: ./ZmapL-Front
+  #   image: kmpc2013/zmaplfront:v1
+  #   container_name: zmaplfront
+  #   restart: on-failure
+  #   environment:
+  #     NODE_ENV: production
+  #   ports:
+  #     - 8081:80
+  #   networks:
+  #     - zmapl
+  #   depends_on:
+  #     - "zmaplback"
+  #   deploy:
+  #     resources:
+  #       limits:
+  #         memory: 100M
+  #       reservations:
+  #         memory: 50M
