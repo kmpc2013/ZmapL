@@ -49,27 +49,56 @@
   >
     <thead>
       <tr>
-        <th style="background-color: #90cae1">id</th>
-        <th
-          (click)="getVeeamMap('VeeamRepoFilesystem')"
+        <th class="thSort" (click)="sortTable('id')" style="background-color: #90cae1">
+          id
+          <span *ngIf="key == 'id'">{{ reverse ? "▲" : "▼" }}</span>
+        </th>
+        <th class="thSort"
+          (click)="sortTable('VeeamRepoFilesystem')"
           style="background-color: #95deb7"
         >
-          Veeam Repository<span *ngIf="key == 'VeeamRepoFilesystem'">{{
+          Veeam Repository
+          <span *ngIf="key == 'VeeamRepoFilesystem'">{{
             reverse ? "▲" : "▼"
           }}</span>
         </th>
-        <th
-          (click)="getVeeamMap('VeeamTenant')"
+        <th class="thSort"
+          (click)="sortTable('VeeamTenant')"
           style="background-color: #95deb7"
         >
-          Veeam Tenant<span *ngIf="key == 'VeeamTenant'">{{
-            reverse ? "▲" : "▼"
-          }}</span>
+          Veeam Tenant
+          <span *ngIf="key == 'VeeamTenant'">{{ reverse ? "▲" : "▼" }}</span>
         </th>
-        <th style="background-color: #95deb7">Prefixo do Cliente</th>
-        <th style="background-color: #aa95de">Ligero Customer ID</th>
-        <th style="background-color: #aa95de">Ligero E-mail</th>
-        <th style="background-color: #aa95de">Ligero Serviço</th>
+        <th class="thSort"
+          (click)="sortTable('VeeamAcronym')"
+          style="background-color: #95deb7"
+        >
+          Prefixo do Cliente
+          <span *ngIf="key == 'VeeamAcronym'">{{ reverse ? "▲" : "▼" }} </span>
+        </th>
+        <th class="thSort"
+          (click)="sortTable('LigeroCustomerId')"
+          style="background-color: #aa95de"
+        >
+          Ligero Customer ID
+          <span *ngIf="key == 'LigeroCustomerId'"
+            >{{ reverse ? "▲" : "▼" }}
+          </span>
+        </th>
+        <th class="thSort"
+          (click)="sortTable('LigeroEmail')"
+          style="background-color: #aa95de"
+        >
+          Ligero E-mail
+          <span *ngIf="key == 'LigeroEmail'">{{ reverse ? "▲" : "▼" }}</span>
+        </th>
+        <th class="thSort"
+          (click)="sortTable('LigeroService')"
+          style="background-color: #aa95de"
+        >
+          Ligero Serviço
+          <span *ngIf="key == 'LigeroService'">{{ reverse ? "▲" : "▼" }}</span>
+        </th>
         <th style="background-color: #90cae1">Última Alteração</th>
         <th style="background-color: #90cae1">Opções</th>
       </tr>

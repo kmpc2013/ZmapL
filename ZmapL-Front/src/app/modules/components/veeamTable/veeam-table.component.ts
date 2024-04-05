@@ -40,16 +40,31 @@ export class VeeamTableComponent {
 
   constructor(public dialog: MatDialog, private backService: BackService) {}
 
-  key: String = 'VeeamRepoFilesystem';
-  reverse: boolean = false;
+  key: String = '';
+  reverse: boolean = true;
 
-  sort(key: String, data: IVeeamMap[]): IVeeamMap[] {
-    console.log('sort');
-    if (key == 'VeeamRepoFilesystem') {
+  sortTable(key: String) {
+    if (key == 'id') {
       this.key = key;
       this.reverse = !this.reverse;
       if (this.reverse == true) {
-        data.sort(function (a, b) {
+        console.log('normal');
+        this.arrayVeeamFiltered.sort(function (a, b) {
+          return a.id < b.id ? -1 : a.id > b.id ? 1 : 0;
+        });
+      } else if (this.reverse == false) {
+        console.log('reverse');
+        this.arrayVeeamFiltered
+          .sort(function (a, b) {
+            return a.id < b.id ? -1 : a.id > b.id ? 1 : 0;
+          })
+          .reverse();
+      }
+    } else if (key == 'VeeamRepoFilesystem') {
+      this.key = key;
+      this.reverse = !this.reverse;
+      if (this.reverse == true) {
+        this.arrayVeeamFiltered.sort(function (a, b) {
           return a.VeeamRepoFilesystem < b.VeeamRepoFilesystem
             ? -1
             : a.VeeamRepoFilesystem > b.VeeamRepoFilesystem
@@ -57,20 +72,21 @@ export class VeeamTableComponent {
             : 0;
         });
       } else if (this.reverse == false) {
-        data.sort(function (a, b) {
-          return a.VeeamRepoFilesystem < b.VeeamRepoFilesystem
-            ? -1
-            : a.VeeamRepoFilesystem > b.VeeamRepoFilesystem
-            ? 1
-            : 0;
-        }).reverse();
+        this.arrayVeeamFiltered
+          .sort(function (a, b) {
+            return a.VeeamRepoFilesystem < b.VeeamRepoFilesystem
+              ? -1
+              : a.VeeamRepoFilesystem > b.VeeamRepoFilesystem
+              ? 1
+              : 0;
+          })
+          .reverse();
       }
-    }
-    else if (key == 'VeeamTenant') {
+    } else if (key == 'VeeamTenant') {
       this.key = key;
       this.reverse = !this.reverse;
       if (this.reverse == true) {
-        data.sort(function (a, b) {
+        this.arrayVeeamFiltered.sort(function (a, b) {
           return a.VeeamTenant < b.VeeamTenant
             ? -1
             : a.VeeamTenant > b.VeeamTenant
@@ -78,20 +94,21 @@ export class VeeamTableComponent {
             : 0;
         });
       } else if (this.reverse == false) {
-        data.sort(function (a, b) {
-          return a.VeeamTenant < b.VeeamTenant
-            ? -1
-            : a.VeeamTenant > b.VeeamTenant
-            ? 1
-            : 0;
-        }).reverse();
+        this.arrayVeeamFiltered
+          .sort(function (a, b) {
+            return a.VeeamTenant < b.VeeamTenant
+              ? -1
+              : a.VeeamTenant > b.VeeamTenant
+              ? 1
+              : 0;
+          })
+          .reverse();
       }
-    }
-    else if (key == 'VeeamAcronym') {
+    } else if (key == 'VeeamAcronym') {
       this.key = key;
       this.reverse = !this.reverse;
       if (this.reverse == true) {
-        data.sort(function (a, b) {
+        this.arrayVeeamFiltered.sort(function (a, b) {
           return a.VeeamAcronym < b.VeeamAcronym
             ? -1
             : a.VeeamAcronym > b.VeeamAcronym
@@ -99,20 +116,21 @@ export class VeeamTableComponent {
             : 0;
         });
       } else if (this.reverse == false) {
-        data.sort(function (a, b) {
-          return a.VeeamAcronym < b.VeeamAcronym
-            ? -1
-            : a.VeeamAcronym > b.VeeamAcronym
-            ? 1
-            : 0;
-        }).reverse();
+        this.arrayVeeamFiltered
+          .sort(function (a, b) {
+            return a.VeeamAcronym < b.VeeamAcronym
+              ? -1
+              : a.VeeamAcronym > b.VeeamAcronym
+              ? 1
+              : 0;
+          })
+          .reverse();
       }
-    }
-    else if (key == 'LigeroCustomerId') {
+    } else if (key == 'LigeroCustomerId') {
       this.key = key;
       this.reverse = !this.reverse;
       if (this.reverse == true) {
-        data.sort(function (a, b) {
+        this.arrayVeeamFiltered.sort(function (a, b) {
           return a.LigeroCustomerId < b.LigeroCustomerId
             ? -1
             : a.LigeroCustomerId > b.LigeroCustomerId
@@ -120,20 +138,21 @@ export class VeeamTableComponent {
             : 0;
         });
       } else if (this.reverse == false) {
-        data.sort(function (a, b) {
-          return a.LigeroCustomerId < b.LigeroCustomerId
-            ? -1
-            : a.LigeroCustomerId > b.LigeroCustomerId
-            ? 1
-            : 0;
-        }).reverse();
+        this.arrayVeeamFiltered
+          .sort(function (a, b) {
+            return a.LigeroCustomerId < b.LigeroCustomerId
+              ? -1
+              : a.LigeroCustomerId > b.LigeroCustomerId
+              ? 1
+              : 0;
+          })
+          .reverse();
       }
-    }
-    else if (key == 'LigeroEmail') {
+    } else if (key == 'LigeroEmail') {
       this.key = key;
       this.reverse = !this.reverse;
       if (this.reverse == true) {
-        data.sort(function (a, b) {
+        this.arrayVeeamFiltered.sort(function (a, b) {
           return a.LigeroEmail < b.LigeroEmail
             ? -1
             : a.LigeroEmail > b.LigeroEmail
@@ -141,20 +160,21 @@ export class VeeamTableComponent {
             : 0;
         });
       } else if (this.reverse == false) {
-        data.sort(function (a, b) {
-          return a.LigeroEmail < b.LigeroEmail
-            ? -1
-            : a.LigeroEmail > b.LigeroEmail
-            ? 1
-            : 0;
-        }).reverse();
+        this.arrayVeeamFiltered
+          .sort(function (a, b) {
+            return a.LigeroEmail < b.LigeroEmail
+              ? -1
+              : a.LigeroEmail > b.LigeroEmail
+              ? 1
+              : 0;
+          })
+          .reverse();
       }
-    }
-    else if (key == 'LigeroService') {
+    } else if (key == 'LigeroService') {
       this.key = key;
       this.reverse = !this.reverse;
       if (this.reverse == true) {
-        data.sort(function (a, b) {
+        this.arrayVeeamFiltered.sort(function (a, b) {
           return a.LigeroService < b.LigeroService
             ? -1
             : a.LigeroService > b.LigeroService
@@ -162,51 +182,38 @@ export class VeeamTableComponent {
             : 0;
         });
       } else if (this.reverse == false) {
-        data.sort(function (a, b) {
-          return a.LigeroService < b.LigeroService
-            ? -1
-            : a.VeeamRepoFilesystem > b.VeeamRepoFilesystem
-            ? 1
-            : 0;
-        }).reverse();
+        this.arrayVeeamFiltered
+          .sort(function (a, b) {
+            return a.LigeroService < b.LigeroService
+              ? -1
+              : a.VeeamRepoFilesystem > b.VeeamRepoFilesystem
+              ? 1
+              : 0;
+          })
+          .reverse();
       }
     } else {
-      this.key = key;
-      this.reverse = !this.reverse;
-      if (this.reverse == true) {
-        data.sort(function (a, b) {
-          return a.VeeamRepoFilesystem < b.VeeamRepoFilesystem
-            ? -1
-            : a.VeeamRepoFilesystem > b.VeeamRepoFilesystem
-            ? 1
-            : 0;
-        });
-      } else if (this.reverse == false) {
-        data.sort(function (a, b) {
-          return a.VeeamRepoFilesystem < b.VeeamRepoFilesystem
-            ? -1
-            : a.VeeamRepoFilesystem > b.VeeamRepoFilesystem
-            ? 1
-            : 0;
-        }).reverse();
-      }
+      console.log('sortTable');
+      this.arrayVeeamFiltered.sort(function (a, b) {
+        return a.id < b.id ? -1 : a.id > b.id ? 1 : 0;
+      });
     }
-    return data;
   }
 
-  getVeeamMap(key: String) {
+  getVeeamMap() {
     this.backService.getVeeamMap().subscribe((data: IVeeamMap[]) => {
       for (var i in data) {
         data[i].ChangedAt = new Date(data[i].ChangedAt);
       }
-      data = this.sort(key, data);
       this.arrayVeeamALL = data;
       this.arrayVeeamFiltered = this.arrayVeeamALL;
+      this.sortTable('id');
     });
   }
 
-  ngOnInit(key: 'Default') {
-    this.getVeeamMap(key);
+  ngOnInit() {
+    this.getVeeamMap();
+    
   }
 
   search(e: Event) {

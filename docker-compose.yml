@@ -47,22 +47,22 @@ services:
         reservations:
           memory: 50M
   
-  # zmaplfront:
-  #   build: ./ZmapL-Front
-  #   image: kmpc2013/zmaplfront:v1
-  #   container_name: zmaplfront
-  #   restart: on-failure
-  #   environment:
-  #     NODE_ENV: production
-  #   ports:
-  #     - 8081:80
-  #   networks:
-  #     - zmapl
-  #   depends_on:
-  #     - "zmaplback"
-  #   deploy:
-  #     resources:
-  #       limits:
-  #         memory: 100M
-  #       reservations:
-  #         memory: 50M
+  zmaplfront:
+    build: ./ZmapL-Front
+    image: kmpc2013/zmaplfront:v1
+    container_name: zmaplfront
+    restart: on-failure
+    environment:
+      NODE_ENV: production
+    ports:
+      - 8081:80
+    networks:
+      - zmapl
+    depends_on:
+      - "zmaplback"
+    deploy:
+      resources:
+        limits:
+          memory: 100M
+        reservations:
+          memory: 50M
