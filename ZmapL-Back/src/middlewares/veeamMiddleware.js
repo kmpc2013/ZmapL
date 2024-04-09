@@ -2,12 +2,12 @@ const validateFieldVeeam = (req, res, next) => {
     const { body } = req;
 
     // veeamRepoFilesystem
-    if (body.veeamRepoFilesystem.trim().length > 100) {
+    if (body.veeamRepoFilesystem.trim().length > 200) {
         return res.status(400).json({ message: 'The field "veeamRepoFilesystem" is to long' });
     }
 
     // veeamAcronym
-    if (body.veeamAcronym.trim().length > 5) {
+    if (body.veeamAcronym.trim().length > 200) {
         return res.status(400).json({ message: 'The field "veeamAcronym" is to long' });
     }
 
@@ -20,7 +20,7 @@ const validateFieldVeeam = (req, res, next) => {
             .status(400)
             .json({ message: 'The field "ligeroCustomerId" cannot be empty' });
     }
-    if (body.ligeroCustomerId.trim().length > 45) {
+    if (body.ligeroCustomerId.trim().length > 200) {
         return res.status(400).json({ message: 'The field "ligeroCustomerId" is to long' });
     }
 
