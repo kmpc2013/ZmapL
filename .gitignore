@@ -1,5 +1,7 @@
 # root
 others/mysql
+node_modules/
+.vscode/
 
 # ZmapL-Back
 ZmapL-Back/node_modules

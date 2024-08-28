@@ -24,3 +24,21 @@ Para resolver esse problema, desenvolvemos uma aplicação web que facilita o ge
 ## **Benefícios:**
 
 Com essa solução, qualquer usuário pode acessar o portal, chamado ZmapL (abreviação de Zabbix Map to Ligero), para realizar as ações necessárias. Isso traz mais facilidade, agilidade e reduz significativamente a incidência de erros.
+
+## **Build**
+
+```shell title="Database"
+docker compose -f docker-compose-mysql.yml up
+```
+
+```shell title="Backend"
+cd ZmapL-Back
+cp .env_template .env
+# Abra e edite o arquivo .env de acordo
+npm start
+```
+
+```shell title="Frontend"
+cd ZmapL-Front
+ng serve
+```
