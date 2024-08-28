@@ -27,18 +27,21 @@ Com essa solução, qualquer usuário pode acessar o portal, chamado ZmapL (abre
 
 ## **Build**
 
-```shell title="Database"
+Database:
+```shell
 docker compose -f docker-compose-mysql.yml up
 ```
 
-```shell title="Backend"
+Backend:
+```shell
 cd ZmapL-Back
 cp .env_template .env
 # Abra e edite o arquivo .env de acordo
 npm start
 ```
 
-```shell title="Frontend"
+Frontend:
+```shell
 cd ZmapL-Front
 ng serve
 ```
