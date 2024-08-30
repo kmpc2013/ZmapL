@@ -34,8 +34,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './veeam-table.component.scss',
 })
 export class VeeamTableComponent {
-  public dataSort: IVeeamMap[] = [];
-  public arrayVeeamALL: IVeeamMap[] = [];
+  private dataSort: IVeeamMap[] = [];
+  private arrayVeeamALL: IVeeamMap[] = [];
   public arrayVeeamFiltered: IVeeamMap[] = [];
 
   constructor(public dialog: MatDialog, private backService: BackService) {}

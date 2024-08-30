@@ -28,8 +28,8 @@ services:
           memory: 50M
 
   zmaplback:
-    build: ./ZmapL-Back
-    image: kmpc2013/zmaplback:v1
+    # build: ./ZmapL-Back
+    image: kmpc2013/zmaplback:v2
     container_name: zmaplback
     restart: on-failure
     environment:
@@ -48,14 +48,15 @@ services:
           memory: 50M
   
   zmaplfront:
-    build: ./ZmapL-Front
-    image: kmpc2013/zmaplfront:v1
+    # build: ./ZmapL-Front
+    image: kmpc2013/zmaplfront:v2
     container_name: zmaplfront
     restart: on-failure
     environment:
       NODE_ENV: production
     ports:
       - 8081:80
+      - 8443:443
     networks:
       - zmapl
     depends_on:

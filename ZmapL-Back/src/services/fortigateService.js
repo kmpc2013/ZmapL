@@ -1,26 +1,22 @@
 const conn = require("./connection");
 
 const getAll = async () => {
-  const [tableResults] = await conn.execute("SELECT * FROM veeam");
+  const [tableResults] = await conn.execute("SELECT * FROM fortigate");
   return tableResults;
 };
 
 const createEntry = async (body) => {
   const {
-    veeamRepoFilesystem,
-    veeamTenant,
-    veeamAcronym,
+    VDOM,
     ligeroCustomerId,
     ligeroEmail,
     ligeroService,
   } = body;
   const dateUTC = new Date(Date.now()).toUTCString();
   const query =
-    "INSERT INTO veeam(VeeamRepoFilesystem, VeeamTenant, VeeamAcronym, LigeroCustomerId, LigeroEmail, LigeroService, changedAt) VALUES (?, ?, ?, ?, ?, ?, ?)";
+    "INSERT INTO fortigate(VDOM, LigeroCustomerId, LigeroEmail, LigeroService, changedAt) VALUES (?, ?, ?, ?, ?)";
   const [createdTask] = await conn.execute(query, [
-    veeamRepoFilesystem,
-    veeamTenant,
-    veeamAcronym,
+    VDOM,
     ligeroCustomerId,
     ligeroEmail,
     ligeroService,
@@ -30,26 +26,22 @@ const createEntry = async (body) => {
 };
 
 const deleteEntry = async (id) => {
-  const query = "DELETE FROM veeam WHERE id = ?";
+  const query = "DELETE FROM fortigate WHERE id = ?";
   const removedTask = await conn.execute(query, [id]);
 };
 
 const updateEntry = async (id, task) => {
   const {
-    veeamRepoFilesystem,
-    veeamTenant,
-    veeamAcronym,
+    VDOM,
     ligeroCustomerId,
     ligeroEmail,
     ligeroService,
   } = task;
   const dateUTC = new Date(Date.now()).toUTCString();
   const query =
-    "UPDATE veeam SET VeeamRepoFilesystem = ?, VeeamTenant = ?, VeeamAcronym = ?,  LigeroCustomerId = ?,  LigeroEmail = ?,  LigeroService = ?,  changedAt = ? WHERE id = ?";
+    "UPDATE fortigate SET VDOM = ?,  LigeroCustomerId = ?,  LigeroEmail = ?,  LigeroService = ?,  changedAt = ? WHERE id = ?";
   const [updateDoc] = await conn.execute(query, [
-    veeamRepoFilesystem,
-    veeamTenant,
-    veeamAcronym,
+    VDOM,
     ligeroCustomerId,
     ligeroEmail,
     ligeroService,
@@ -63,5 +55,5 @@ module.exports = {
   getAll,
   createEntry,
   deleteEntry,
-  updateEntry,
+  updateEntry
 };

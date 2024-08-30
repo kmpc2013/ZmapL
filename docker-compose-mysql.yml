@@ -18,7 +18,7 @@ services:
       - zmapl
     volumes:
       - ./others/init.sql:/data/application/init.sql
-      - /tmp/mysql:/var/lib/mysql
+      - ./others/mysql:/var/lib/mysql
     command: --init-file /data/application/init.sql
     deploy:
       resources:

@@ -45,3 +45,21 @@ Frontend:
 cd ZmapL-Front
 ng serve
 ```
+
+Gerar certificado autoassinado:
+```shell
+openssl req -x509 -sha256 -newkey rsa:2048 -keyout nginx-selfsigned.key -out nginx-selfsigned.crt -days 1024 -nodes
+```
+- Copie os dois arquivos gerados para ZmapL-Front/others/certs
+
+Build docker image:
+```shell
+docker build -t kmpc2013/zmaplfront:<tag> ZmapL-Front\
+docker build -t kmpc2013/zmaplback:<tag> ZmapL-Front\
+```
+
+Enviar para o dockerhub:
+```shell
+docker push kmpc2013/zmaplfront:<tag>
+docker push kmpc2013/zmaplback:<tag>
+```

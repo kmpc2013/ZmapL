@@ -1,0 +1,81 @@
+<header>
+  <h2 mat-dialog-title class="Title">Criando Mapeamento</h2>
+  <button (click)="closeModal()">
+    <img
+      class="closeButton"
+      src="assets/icons/close.svg"
+      alt="Botão para fechar o dialogo"
+      height="20px"
+      width="20px"
+    />
+  </button>
+</header>
+<form [formGroup]="formGroup" (ngSubmit)="salvar()">
+  <div class="formDiv">
+    <table>
+      <tr>
+        <td class="formName">VDOM:</td>
+        <td>
+          <input
+            class="formInput"
+            formControlName="VDOM"
+            placeholder="VDOM_NAME_01, VDOM_NAME_02..."
+            type="text"
+            maxlength="200"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td class="formName">Ligero Customer ID:</td>
+        <td>
+          <input
+            class="formInput"
+            formControlName="ligeroCustomerId"
+            placeholder="MARTINELLI, PRIMATO..."
+            type="text"
+            maxlength="45"
+            required
+          />
+        </td>
+        <td class="requiredIcon">*</td>
+      </tr>
+      <tr>
+        <td class="formName">Ligero E-mail:</td>
+        <td>
+          <input
+            class="formInput"
+            formControlName="ligeroEmail"
+            placeholder="user@cliente.com.br..."
+            type="text"
+            maxlength="45"
+            required
+          />
+        </td>
+        <td class="requiredIcon">*</td>
+      </tr>
+      <tr>
+        <td class="formName">Ligero Serviço:</td>
+        <td>
+          <input
+            class="formInput"
+            formControlName="ligeroService"
+            placeholder="Backup, Veeam..."
+            type="text"
+            maxlength="45"
+            required
+          />
+        </td>
+        <td class="requiredIcon">*</td>
+      </tr>
+    </table>
+  </div>
+  <button
+    mat-raised-button
+    type="button"
+    class="btn btn-outline-primary"
+    [disabled]="!formGroup.valid"
+    (click)="salvar()"
+  >
+    Save
+  </button>
+</form>
