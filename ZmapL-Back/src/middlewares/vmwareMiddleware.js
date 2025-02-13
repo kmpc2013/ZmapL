@@ -1,19 +1,9 @@
-const validateFieldVeeam = (req, res, next) => {
+const validateFieldVmware = (req, res, next) => {
     const { body } = req;
 
-    // veeamRepoFilesystem
-    if (body.veeamRepoFilesystem.trim().length > 200) {
-        return res.status(400).json({ message: 'The field "veeamRepoFilesystem" is to long' });
-    }
-
-    // veeamTenant
-    if (body.veeamTenant.trim().length > 200) {
-        return res.status(400).json({ message: 'The field "veeamTenant" is to long' });
-    }
-
-    // veeamAcronym
-    if (body.veeamAcronym.trim().length > 200) {
-        return res.status(400).json({ message: 'The field "veeamAcronym" is to long' });
+    // ClientVmwareFolder
+    if (body.clientVmwareFolder.trim().length > 200) {
+        return res.status(400).json({ message: 'The field "clientVmwareFolder" is to long' });
     }
 
     // ligeroCustomerId
@@ -60,5 +50,5 @@ const validateFieldVeeam = (req, res, next) => {
 
 
 module.exports = {
-    validateFieldVeeam
+    validateFieldVmware
 };
