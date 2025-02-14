@@ -1,31 +1,32 @@
-<app-header></app-header>
-
-<div class="container">
-  <div class="title">
-    <h1>Zabbix Mapping to Ligero</h1>
-  </div>
-  <div class="subtitle">
-    <p>
-      Mapeando eventos de um mesmo host no Zabbix para abrir tickets com diferentes características.
-    </p>
-  </div>
-
-  <div class="links">
-    <div class="card" onclick="location.href='veeam';">
-      <img src="assets/veeam_logo_800x800.png" alt="Veeam" />
-      <span>Veeam</span>
+<div class="background__img">
+  <app-header></app-header>
+  <div class="container">
+    <div class="title">
+      <h1>Zabbix Mapping to Ligero</h1>
     </div>
-
-    <div class="card" onclick="location.href='fortigate';">
-      <img src="assets/fortigate_logo_1537x1101.png" alt="FortiGate" />
-      <span>FortiGate</span>
+    <div class="subtitle">
+      <p>
+        Mapeando eventos de um mesmo host no Zabbix para abrir tickets com diferentes características.
+      </p>
     </div>
-
-    <div class="card" onclick="location.href='vmware';">
-      <img src="assets/vmware_vsphere_logo_800x800.png" alt="VMware" />
-      <span>VMware</span>
+  
+    <div class="links">
+      <div class="card" onclick="location.href='veeam';">
+        <img class="card__veeam" src="assets/veeam_logo_800x800.png" alt="Veeam" />
+        <span>Veeam</span>
+      </div>
+  
+      <div class="card" onclick="location.href='fortigate';">
+        <img src="assets/fortigate_logo_1537x1101.png" alt="FortiGate" />
+        <span>FortiGate</span>
+      </div>
+  
+      <div class="card" onclick="location.href='vmware';">
+        <img src="assets/vmware_vsphere_logo_800x800.png" alt="VMware" />
+        <span>VMware</span>
+      </div>
     </div>
   </div>
+  <app-footer></app-footer>
 </div>
 
-<app-footer></app-footer>

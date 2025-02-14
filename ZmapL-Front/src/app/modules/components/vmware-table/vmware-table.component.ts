@@ -22,8 +22,8 @@ export class VmwareTableComponent {
   private arrayVmwareALL: IVmwareMap[] = [];
   private dataSort: IVmwareMap[] = [];
 
-  constructor(public dialog: MatDialog, private backService: BackService) {}
-  
+  constructor(public dialog: MatDialog, private backService: BackService) { }
+
   getVmwareMap() {
     this.backService.getVmwareMap().subscribe((data: IVmwareMap[]) => {
       for (var i in data) {
@@ -74,8 +74,8 @@ export class VmwareTableComponent {
           return a.ClientVmwareFolder < b.ClientVmwareFolder
             ? -1
             : a.ClientVmwareFolder > b.ClientVmwareFolder
-            ? 1
-            : 0;
+              ? 1
+              : 0;
         });
       } else if (this.reverse == false) {
         this.arrayVmwareFiltered
@@ -83,8 +83,8 @@ export class VmwareTableComponent {
             return a.ClientVmwareFolder < b.ClientVmwareFolder
               ? -1
               : a.ClientVmwareFolder > b.ClientVmwareFolder
-              ? 1
-              : 0;
+                ? 1
+                : 0;
           })
           .reverse();
       }
@@ -96,8 +96,8 @@ export class VmwareTableComponent {
           return a.LigeroCustomerId < b.LigeroCustomerId
             ? -1
             : a.LigeroCustomerId > b.LigeroCustomerId
-            ? 1
-            : 0;
+              ? 1
+              : 0;
         });
       } else if (this.reverse == false) {
         this.arrayVmwareFiltered
@@ -105,8 +105,8 @@ export class VmwareTableComponent {
             return a.LigeroCustomerId < b.LigeroCustomerId
               ? -1
               : a.LigeroCustomerId > b.LigeroCustomerId
-              ? 1
-              : 0;
+                ? 1
+                : 0;
           })
           .reverse();
       }
@@ -118,8 +118,8 @@ export class VmwareTableComponent {
           return a.LigeroEmail < b.LigeroEmail
             ? -1
             : a.LigeroEmail > b.LigeroEmail
-            ? 1
-            : 0;
+              ? 1
+              : 0;
         });
       } else if (this.reverse == false) {
         this.arrayVmwareFiltered
@@ -127,8 +127,8 @@ export class VmwareTableComponent {
             return a.LigeroEmail < b.LigeroEmail
               ? -1
               : a.LigeroEmail > b.LigeroEmail
-              ? 1
-              : 0;
+                ? 1
+                : 0;
           })
           .reverse();
       }
@@ -140,8 +140,8 @@ export class VmwareTableComponent {
           return a.LigeroService < b.LigeroService
             ? -1
             : a.LigeroService > b.LigeroService
-            ? 1
-            : 0;
+              ? 1
+              : 0;
         });
       } else if (this.reverse == false) {
         this.arrayVmwareFiltered
@@ -149,8 +149,8 @@ export class VmwareTableComponent {
             return a.LigeroService < b.LigeroService
               ? -1
               : a.LigeroService > b.LigeroService
-              ? 1
-              : 0;
+                ? 1
+                : 0;
           })
           .reverse();
       }

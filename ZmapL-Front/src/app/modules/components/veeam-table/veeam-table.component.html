@@ -1,0 +1,89 @@
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+</head>
+<div class="divSearch">
+  <div class="search-container">
+    <form>
+      <img class="iconSearch" src="assets/icons/search_02.png" alt="Icone de lupa para pesquisa"/>
+      <input class="inputSearch" type="text" placeholder="Pesquise aqui..." (input)="search($event)" />
+    </form>
+    <div class="button-group">
+      <a href="https://servicedesk.sercompe.com.br/otrs/index.pl?Action=AgentFAQZoom;ItemID=401" 
+         class="buttomNewProced" target="_blank">
+        PROCEDIMENTO
+      </a>
+      <button class="buttomNewMap" (click)="openDialogVeeamCreate($event)">
+        NOVO MAPEAMENTO
+      </button>
+    </div>
+  </div>
+</div>
+<div class="divTable">
+  <table class="table table-striped table-hover mt-3 text-center table-bordered">
+    <thead>
+      <tr>
+        <th class="thSort" (click)="sortTable('id')" style="background-color: #90cae1">
+          Id
+          <span *ngIf="key == 'id'">{{ reverse ? "▲" : "▼" }}</span>
+        </th>
+        <th class="thSort" (click)="sortTable('VeeamRepoFilesystem')" style="background-color: #95deb7">
+          Veeam Repository
+          <span *ngIf="key == 'VeeamRepoFilesystem'">{{
+            reverse ? "▲" : "▼"
+            }}</span>
+        </th>
+        <th class="thSort" (click)="sortTable('VeeamTenant')" style="background-color: #95deb7">
+          Veeam Tenant
+          <span *ngIf="key == 'VeeamTenant'">{{ reverse ? "▲" : "▼" }}</span>
+        </th>
+        <th class="thSort" (click)="sortTable('VeeamAcronym')" style="background-color: #95deb7">
+          Prefixo do Cliente
+          <span *ngIf="key == 'VeeamAcronym'">{{ reverse ? "▲" : "▼" }} </span>
+        </th>
+        <th class="thSort" (click)="sortTable('LigeroCustomerId')" style="background-color: #aa95de">
+          Ligero Customer ID
+          <span *ngIf="key == 'LigeroCustomerId'">{{ reverse ? "▲" : "▼" }}
+          </span>
+        </th>
+        <th class="thSort" (click)="sortTable('LigeroEmail')" style="background-color: #aa95de">
+          Ligero E-mail
+          <span *ngIf="key == 'LigeroEmail'">{{ reverse ? "▲" : "▼" }}</span>
+        </th>
+        <th class="thSort" (click)="sortTable('LigeroService')" style="background-color: #aa95de">
+          Ligero Serviço
+          <span *ngIf="key == 'LigeroService'">{{ reverse ? "▲" : "▼" }}</span>
+        </th>
+        <th style="background-color: #90cae1">Última Alteração</th>
+        <th style="background-color: #90cae1">Ações</th>
+      </tr>
+    </thead>
+    @for(item of arrayVeeamFiltered; track item;){
+    <tbody id="data">
+      <tr class="tableValues">
+        <td>{{ item.id }}</td>
+        <td>{{ item.VeeamRepoFilesystem }}</td>
+        <td>{{ item.VeeamTenant }}</td>
+        <td>{{ item.VeeamAcronym }}</td>
+        <td>{{ item.LigeroCustomerId }}</td>
+        <td>{{ item.LigeroEmail }}</td>
+        <td>{{ item.LigeroService }}</td>
+        <td>{{ item.ChangedAt | date : "d/MM/yy - H:mm:ss" }}</td>
+        <td>
+          <button class="btn btn-info" (click)="openDialogVeeamEdit(item)">
+            Editar
+          </button>
+          <button color="warn" class="btn btn-danger" (click)="openDialogVeeamDelete(item)">
+            Remover
+          </button>
+        </td>
+      </tr>
+    </tbody>
+    }
+  </table>
+</div>

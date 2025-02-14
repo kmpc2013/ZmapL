@@ -4,84 +4,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Bootstrap CSS -->
-  <link
-    rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-    crossorigin="anonymous"
-  />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
 </head>
 <div class="divSearch">
   <div class="search-container">
     <form>
-      <figure>
-        <img
-          class="icon-search"
-          src="assets/icons/search.svg"
-          alt="Icone de lupa para pesquisa"
-          style="cursor: pointer"
-        />
-        <input
-          class="inputSearch"
-          type="text"
-          placeholder="Buscar documento"
-          (input)="search($event)"
-        />
-        <a
-          href="https://servicedesk.sercompe.com.br/otrs/index.pl?Action=AgentFAQZoom;ItemID=401"
-          target="_blank"
-          >Ajuda</a
-        >
-        <button
-          class="buttomNewMap btn btn-primary"
-          color="primary"
-          (click)="openDialogVmwareCreate($event)"
-        >
-          Novo Mapeamento
-        </button>
-      </figure>
+      <img class="iconSearch" src="assets/icons/search_02.png" alt="Icone de lupa para pesquisa"/>
+      <input class="inputSearch" type="text" placeholder="Pesquise aqui..." (input)="search($event)" />
     </form>
+    <div class="button-group">
+      <a href="https://servicedesk.sercompe.com.br/otrs/index.pl?Action=AgentFAQZoom;ItemID=401" 
+         class="buttomNewProced" target="_blank">
+        PROCEDIMENTO
+      </a>
+      <button class="buttomNewMap" (click)="openDialogVmwareCreate($event)">
+        NOVO MAPEAMENTO
+      </button>
+    </div>
   </div>
 </div>
 <div class="divTable">
-  <table
-    class="table table-striped table-hover mt-3 text-center table-bordered"
-  >
+  <table class="table table-striped table-hover mt-3 text-center table-bordered">
     <thead>
       <tr>
         <th class="thSort" (click)="sortTable('id')" style="background-color: #90cae1">
           id
           <span *ngIf="key == 'id'">{{ reverse ? "▲" : "▼" }}</span>
         </th>
-        <th class="thSort"
-          (click)="sortTable('ClientVmwareFolder')"
-          style="background-color: #95deb7"
-        >
+        <th class="thSort" (click)="sortTable('ClientVmwareFolder')" style="background-color: #95deb7">
           Client VMware Folder
           <span *ngIf="key == 'ClientVmwareFolder'">{{
             reverse ? "▲" : "▼"
-          }}</span>
+            }}</span>
         </th>
-        <th class="thSort"
-          (click)="sortTable('LigeroCustomerId')"
-          style="background-color: #aa95de"
-        >
+        <th class="thSort" (click)="sortTable('LigeroCustomerId')" style="background-color: #aa95de">
           Ligero Customer ID
-          <span *ngIf="key == 'LigeroCustomerId'"
-            >{{ reverse ? "▲" : "▼" }}
+          <span *ngIf="key == 'LigeroCustomerId'">{{ reverse ? "▲" : "▼" }}
           </span>
         </th>
-        <th class="thSort"
-          (click)="sortTable('LigeroEmail')"
-          style="background-color: #aa95de"
-        >
+        <th class="thSort" (click)="sortTable('LigeroEmail')" style="background-color: #aa95de">
           Ligero E-mail
           <span *ngIf="key == 'LigeroEmail'">{{ reverse ? "▲" : "▼" }}</span>
         </th>
-        <th class="thSort"
-          (click)="sortTable('LigeroService')"
-          style="background-color: #aa95de"
-        >
+        <th class="thSort" (click)="sortTable('LigeroService')" style="background-color: #aa95de">
           Ligero Serviço
           <span *ngIf="key == 'LigeroService'">{{ reverse ? "▲" : "▼" }}</span>
         </th>
@@ -99,18 +65,10 @@
         <td>{{ item.LigeroService }}</td>
         <td>{{ item.ChangedAt | date : "d/MM/yy - H:mm:ss" }}</td>
         <td>
-          <button
-            color="primary"
-            class="btn btn-info"
-            (click)="openDialogVmwareEdit(item)"
-          >
+          <button color="primary" class="btn btn-info" (click)="openDialogVmwareEdit(item)">
             Editar
           </button>
-          <button
-            color="warn"
-            class="btn btn-danger"
-            (click)="openDialogVmwareDelete(item)"
-          >
+          <button color="warn" class="btn btn-danger" (click)="openDialogVmwareDelete(item)">
             Remover
           </button>
         </td>

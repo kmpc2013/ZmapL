@@ -38,7 +38,7 @@ export class VeeamTableComponent {
   private arrayVeeamALL: IVeeamMap[] = [];
   public arrayVeeamFiltered: IVeeamMap[] = [];
 
-  constructor(public dialog: MatDialog, private backService: BackService) {}
+  constructor(public dialog: MatDialog, private backService: BackService) { }
 
   key: String = '';
   reverse: boolean = true;
@@ -66,8 +66,8 @@ export class VeeamTableComponent {
           return a.VeeamRepoFilesystem < b.VeeamRepoFilesystem
             ? -1
             : a.VeeamRepoFilesystem > b.VeeamRepoFilesystem
-            ? 1
-            : 0;
+              ? 1
+              : 0;
         });
       } else if (this.reverse == false) {
         this.arrayVeeamFiltered
@@ -75,8 +75,8 @@ export class VeeamTableComponent {
             return a.VeeamRepoFilesystem < b.VeeamRepoFilesystem
               ? -1
               : a.VeeamRepoFilesystem > b.VeeamRepoFilesystem
-              ? 1
-              : 0;
+                ? 1
+                : 0;
           })
           .reverse();
       }
@@ -88,8 +88,8 @@ export class VeeamTableComponent {
           return a.VeeamTenant < b.VeeamTenant
             ? -1
             : a.VeeamTenant > b.VeeamTenant
-            ? 1
-            : 0;
+              ? 1
+              : 0;
         });
       } else if (this.reverse == false) {
         this.arrayVeeamFiltered
@@ -97,8 +97,8 @@ export class VeeamTableComponent {
             return a.VeeamTenant < b.VeeamTenant
               ? -1
               : a.VeeamTenant > b.VeeamTenant
-              ? 1
-              : 0;
+                ? 1
+                : 0;
           })
           .reverse();
       }
@@ -110,8 +110,8 @@ export class VeeamTableComponent {
           return a.VeeamAcronym < b.VeeamAcronym
             ? -1
             : a.VeeamAcronym > b.VeeamAcronym
-            ? 1
-            : 0;
+              ? 1
+              : 0;
         });
       } else if (this.reverse == false) {
         this.arrayVeeamFiltered
@@ -119,8 +119,8 @@ export class VeeamTableComponent {
             return a.VeeamAcronym < b.VeeamAcronym
               ? -1
               : a.VeeamAcronym > b.VeeamAcronym
-              ? 1
-              : 0;
+                ? 1
+                : 0;
           })
           .reverse();
       }
@@ -132,8 +132,8 @@ export class VeeamTableComponent {
           return a.LigeroCustomerId < b.LigeroCustomerId
             ? -1
             : a.LigeroCustomerId > b.LigeroCustomerId
-            ? 1
-            : 0;
+              ? 1
+              : 0;
         });
       } else if (this.reverse == false) {
         this.arrayVeeamFiltered
@@ -141,8 +141,8 @@ export class VeeamTableComponent {
             return a.LigeroCustomerId < b.LigeroCustomerId
               ? -1
               : a.LigeroCustomerId > b.LigeroCustomerId
-              ? 1
-              : 0;
+                ? 1
+                : 0;
           })
           .reverse();
       }
@@ -154,8 +154,8 @@ export class VeeamTableComponent {
           return a.LigeroEmail < b.LigeroEmail
             ? -1
             : a.LigeroEmail > b.LigeroEmail
-            ? 1
-            : 0;
+              ? 1
+              : 0;
         });
       } else if (this.reverse == false) {
         this.arrayVeeamFiltered
@@ -163,8 +163,8 @@ export class VeeamTableComponent {
             return a.LigeroEmail < b.LigeroEmail
               ? -1
               : a.LigeroEmail > b.LigeroEmail
-              ? 1
-              : 0;
+                ? 1
+                : 0;
           })
           .reverse();
       }
@@ -176,8 +176,8 @@ export class VeeamTableComponent {
           return a.LigeroService < b.LigeroService
             ? -1
             : a.LigeroService > b.LigeroService
-            ? 1
-            : 0;
+              ? 1
+              : 0;
         });
       } else if (this.reverse == false) {
         this.arrayVeeamFiltered
@@ -185,8 +185,8 @@ export class VeeamTableComponent {
             return a.LigeroService < b.LigeroService
               ? -1
               : a.VeeamRepoFilesystem > b.VeeamRepoFilesystem
-              ? 1
-              : 0;
+                ? 1
+                : 0;
           })
           .reverse();
       }
@@ -246,4 +246,5 @@ export class VeeamTableComponent {
       panelClass: EDialogPanelClass.PROJECTS,
     });
   }
+  
 }
