@@ -1,49 +1,49 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IFortigateMap } from '../../interface/IFortigateMap';
+import { Component } from '@angular/core';
+import { IVmwareMap } from '../../interface/IVmwareMap';
 import { MatDialog } from '@angular/material/dialog';
 import { BackService } from '../../services/back.service';
-import { FortigateCreateComponent } from '../../dialogs/fortigate-create/fortigate-create.component';
+import { VmwareCreateComponent } from '../../dialogs/vmware-create/vmware-create.component';
 import { EDialogPanelClass } from '../../enum/EDialogPanelClass.enum';
-import { FortigateEditComponent } from '../../dialogs/fortigate-edit/fortigate-edit.component';
-import { FortigateDeleteComponent } from '../../dialogs/fortigate-delete/fortigate-delete.component';
+import { VmwareEditComponent } from '../../dialogs/vmware-edit/vmware-edit.component';
+import { VmwareDeleteComponent } from '../../dialogs/vmware-delete/vmware-delete.component';
 
 @Component({
-  selector: 'app-fortigate-table',
+  selector: 'app-vmware-table',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './fortigate-table.component.html',
-  styleUrl: './fortigate-table.component.scss',
+  templateUrl: './vmware-table.component.html',
+  styleUrl: './vmware-table.component.scss'
 })
-export class FortigateTableComponent {
+export class VmwareTableComponent {
   public key: String = '';
   public reverse: boolean = true;
-  public arrayFortigateFiltered: IFortigateMap[] = [];
-  private arrayFortigateALL: IFortigateMap[] = [];
-  private dataSort: IFortigateMap[] = [];
+  public arrayVmwareFiltered: IVmwareMap[] = [];
+  private arrayVmwareALL: IVmwareMap[] = [];
+  private dataSort: IVmwareMap[] = [];
 
   constructor(public dialog: MatDialog, private backService: BackService) {}
   
-  getFortigateMap() {
-    this.backService.getFortigateMap().subscribe((data: IFortigateMap[]) => {
+  getVmwareMap() {
+    this.backService.getVmwareMap().subscribe((data: IVmwareMap[]) => {
       for (var i in data) {
         data[i].ChangedAt = new Date(data[i].ChangedAt);
       }
-      this.arrayFortigateALL = data;
-      this.arrayFortigateFiltered = this.arrayFortigateALL;
+      this.arrayVmwareALL = data;
+      this.arrayVmwareFiltered = this.arrayVmwareALL;
       this.sortTable('id');
     });
   }
 
   ngOnInit() {
-    this.getFortigateMap();
+    this.getVmwareMap();
   }
 
   search(e: Event) {
     const target = e.target as HTMLInputElement;
     const value = target.value.toLowerCase();
 
-    this.arrayFortigateFiltered = this.arrayFortigateFiltered.filter((item) => {
+    this.arrayVmwareFiltered = this.arrayVmwareFiltered.filter((item) => {
       return Object.values(item).some(
         (val) => typeof val === 'string' && val.toLowerCase().includes(value)
       );
@@ -55,33 +55,33 @@ export class FortigateTableComponent {
       this.key = key;
       this.reverse = !this.reverse;
       if (this.reverse == true) {
-        this.arrayFortigateFiltered.sort(function (a, b) {
+        this.arrayVmwareFiltered.sort(function (a, b) {
           return a.id < b.id ? -1 : a.id > b.id ? 1 : 0;
         });
       } else if (this.reverse == false) {
-        this.arrayFortigateFiltered
+        this.arrayVmwareFiltered
           .sort(function (a, b) {
             return a.id < b.id ? -1 : a.id > b.id ? 1 : 0;
           })
           .reverse();
       }
-    } else if (key == 'VDOM') {
+    } else if (key == 'ClientVmwareFolder') {
       this.key = key;
       this.reverse = !this.reverse;
       if (this.reverse == true) {
-        this.arrayFortigateFiltered.sort(function (a, b) {
-          return a.VDOM < b.VDOM
+        this.arrayVmwareFiltered.sort(function (a, b) {
+          return a.ClientVmwareFolder < b.ClientVmwareFolder
             ? -1
-            : a.VDOM > b.VDOM
+            : a.ClientVmwareFolder > b.ClientVmwareFolder
             ? 1
             : 0;
         });
       } else if (this.reverse == false) {
-        this.arrayFortigateFiltered
+        this.arrayVmwareFiltered
           .sort(function (a, b) {
-            return a.VDOM < b.VDOM
+            return a.ClientVmwareFolder < b.ClientVmwareFolder
               ? -1
-              : a.VDOM > b.VDOM
+              : a.ClientVmwareFolder > b.ClientVmwareFolder
               ? 1
               : 0;
           })
@@ -91,7 +91,7 @@ export class FortigateTableComponent {
       this.key = key;
       this.reverse = !this.reverse;
       if (this.reverse == true) {
-        this.arrayFortigateFiltered.sort(function (a, b) {
+        this.arrayVmwareFiltered.sort(function (a, b) {
           return a.LigeroCustomerId < b.LigeroCustomerId
             ? -1
             : a.LigeroCustomerId > b.LigeroCustomerId
@@ -99,7 +99,7 @@ export class FortigateTableComponent {
             : 0;
         });
       } else if (this.reverse == false) {
-        this.arrayFortigateFiltered
+        this.arrayVmwareFiltered
           .sort(function (a, b) {
             return a.LigeroCustomerId < b.LigeroCustomerId
               ? -1
@@ -113,7 +113,7 @@ export class FortigateTableComponent {
       this.key = key;
       this.reverse = !this.reverse;
       if (this.reverse == true) {
-        this.arrayFortigateFiltered.sort(function (a, b) {
+        this.arrayVmwareFiltered.sort(function (a, b) {
           return a.LigeroEmail < b.LigeroEmail
             ? -1
             : a.LigeroEmail > b.LigeroEmail
@@ -121,7 +121,7 @@ export class FortigateTableComponent {
             : 0;
         });
       } else if (this.reverse == false) {
-        this.arrayFortigateFiltered
+        this.arrayVmwareFiltered
           .sort(function (a, b) {
             return a.LigeroEmail < b.LigeroEmail
               ? -1
@@ -135,7 +135,7 @@ export class FortigateTableComponent {
       this.key = key;
       this.reverse = !this.reverse;
       if (this.reverse == true) {
-        this.arrayFortigateFiltered.sort(function (a, b) {
+        this.arrayVmwareFiltered.sort(function (a, b) {
           return a.LigeroService < b.LigeroService
             ? -1
             : a.LigeroService > b.LigeroService
@@ -143,7 +143,7 @@ export class FortigateTableComponent {
             : 0;
         });
       } else if (this.reverse == false) {
-        this.arrayFortigateFiltered
+        this.arrayVmwareFiltered
           .sort(function (a, b) {
             return a.LigeroService < b.LigeroService
               ? -1
@@ -154,34 +154,33 @@ export class FortigateTableComponent {
           .reverse();
       }
     } else {
-      this.arrayFortigateFiltered.sort(function (a, b) {
+      this.arrayVmwareFiltered.sort(function (a, b) {
         return a.id < b.id ? -1 : a.id > b.id ? 1 : 0;
       });
     }
   }
 
 
-  public openDialogFortigateCreate(event: Event) {
+  public openDialogVmwareCreate(event: Event) {
     event.preventDefault();
-    this.dialog.open(FortigateCreateComponent, {
+    this.dialog.open(VmwareCreateComponent, {
       panelClass: EDialogPanelClass.PROJECTS,
       width: '700px',
     });
   }
 
-  public openDialogFortigateEdit(data: IFortigateMap) {
-    this.dialog.open(FortigateEditComponent, {
+  public openDialogVmwareEdit(data: IVmwareMap) {
+    this.dialog.open(VmwareEditComponent, {
       data,
       panelClass: EDialogPanelClass.PROJECTS,
       width: '700px',
     });
   }
 
-  public openDialogFortigateDelete(data: IFortigateMap) {
-    this.dialog.open(FortigateDeleteComponent, {
+  public openDialogVmwareDelete(data: IVmwareMap) {
+    this.dialog.open(VmwareDeleteComponent, {
       data,
       panelClass: EDialogPanelClass.PROJECTS,
     });
   }
-
 }

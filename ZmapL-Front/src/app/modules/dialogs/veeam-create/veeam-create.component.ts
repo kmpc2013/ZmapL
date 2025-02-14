@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { IVeeamMap } from '../../interface/IVeeamMap';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialogRef } from '@angular/material/dialog';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-veeam-create',
@@ -39,15 +40,24 @@ export class VeeamCreateComponent {
   }
 
   salvar() {
-    console.log(this.formGroup.value);
     this.veeamService.addVeeamMap(this.formGroup.value).subscribe({
       next: (addEntry) => {
-        console.log(this.formGroup.value);
-        window.location.reload();
-        alert('Cadastrado com sucesso!');
+        Swal.fire({
+          title: 'Sucesso!',
+          text: 'Criado com sucesso!',
+          icon: 'success',
+          confirmButtonText: 'OK'
+        }).then(() => {
+          window.location.reload();
+        });
       },
       error: (error) => {
-        alert('Erro ao cadastrar');
+        Swal.fire({
+          title: 'Erro!',
+          text: 'Erro ao criar',
+          icon: 'error',
+          confirmButtonText: 'OK'
+        });
       },
     });
   }

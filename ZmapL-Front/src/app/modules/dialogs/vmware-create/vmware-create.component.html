@@ -1,25 +1,25 @@
 <header>
-    <h2 mat-dialog-title class="Title">Editando Mapeamento</h2>
-    <button (click)="closeModal()">
-      <img
-        class="closeButton"
-        src="assets/icons/close.svg"
-        alt="Botão para fechar o dialogo"
-        height="20px"
-        width="20px"
-      />
-    </button>
-  </header>
+  <h2 mat-dialog-title class="Title">Criando Mapeamento</h2>
+  <button (click)="closeModal()">
+    <img
+      class="closeButton"
+      src="assets/icons/close.svg"
+      alt="Botão para fechar o dialogo"
+      height="20px"
+      width="20px"
+    />
+  </button>
+</header>
 <form [formGroup]="formGroup" (ngSubmit)="salvar()">
   <div class="formDiv">
     <table>
       <tr>
-        <td class="formName">VDOM:</td>
+        <td class="formName">Client VMware Folder:</td>
         <td>
           <input
             class="formInput"
-            formControlName="VDOM"
-            placeholder="VDOM_NAME_01, ..."
+            formControlName="clientVmwareFolder"
+            placeholder="Client VMware Folder 01, ..."
             type="text"
             maxlength="200"
           />
@@ -59,7 +59,7 @@
           <input
             class="formInput"
             formControlName="ligeroService"
-            placeholder="Fortigate"
+            placeholder="VMware"
             type="text"
             maxlength="45"
             required

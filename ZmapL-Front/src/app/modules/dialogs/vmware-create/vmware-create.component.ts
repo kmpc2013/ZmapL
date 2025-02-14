@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { IFortigateMap } from '../../interface/IFortigateMap';
+import { IVmwareMap } from '../../interface/IVmwareMap';
 import { MatDialogRef } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
@@ -8,18 +8,18 @@ import { BackService } from '../../services/back.service';
 import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-fortigate-create',
+  selector: 'app-vmware-create',
   standalone: true,
   imports: [ReactiveFormsModule],
-  templateUrl: './fortigate-create.component.html',
-  styleUrl: './fortigate-create.component.scss',
+  templateUrl: './vmware-create.component.html',
+  styleUrl: './vmware-create.component.scss'
 })
-export class FortigateCreateComponent {
+export class VmwareCreateComponent {
   formGroup!: FormGroup;
-  veeamInterface!: IFortigateMap;
+  veeamInterface!: IVmwareMap;
 
   constructor(
-    private _diaLogRef: MatDialogRef<FortigateCreateComponent>,
+    private _diaLogRef: MatDialogRef<VmwareCreateComponent>,
     private formBuilder: FormBuilder,
     private backService: BackService,
     public matSnackBar: MatSnackBar,
@@ -32,7 +32,7 @@ export class FortigateCreateComponent {
 
   ngOnInit() {
     this.formGroup = this.formBuilder.group({
-      VDOM: [''],
+      clientVmwareFolder: [''],
       ligeroCustomerId: [''],
       ligeroEmail: [''],
       ligeroService: [''],
@@ -40,7 +40,7 @@ export class FortigateCreateComponent {
   }
 
   salvar() {
-    this.backService.addFortigateMap(this.formGroup.value).subscribe({
+    this.backService.addVmwareMap(this.formGroup.value).subscribe({
       next: (addEntry) => {
         Swal.fire({
           title: 'Sucesso!',

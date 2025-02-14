@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { IVeeamMap } from '../interface/IVeeamMap';
 import { Observable, retry } from 'rxjs';
 import { IFortigateMap } from '../interface/IFortigateMap';
+import { IVmwareMap } from '../interface/IVmwareMap';
 
 @Injectable({
   providedIn: 'root'
@@ -56,6 +57,30 @@ export class BackService {
   public deleteFortigateMap(fortigateMap: IFortigateMap): Observable<IFortigateMap[]> {
     return this.http
       .delete<IFortigateMap[]>(`${this.SERVER_URL}/fortigate/${fortigateMap.id}`)
+      .pipe(retry(2));
+  }
+
+  public getVmwareMap(): Observable<IVmwareMap[]> {
+    return this.http
+      .get<IVmwareMap[]>(`${this.SERVER_URL}/vmware`)
+      .pipe(retry(2));
+  }
+
+  public addVmwareMap(vmwareMap: IVmwareMap): Observable<IVmwareMap[]> {
+    return this.http
+      .post<IVmwareMap[]>(`${this.SERVER_URL}/vmware`,vmwareMap)
+      .pipe(retry(2));
+  }
+
+  public editVmwareMap(vmwareMap: IVmwareMap): Observable<IVmwareMap[]> {
+    return this.http
+      .put<IVmwareMap[]>(`${this.SERVER_URL}/vmware/${vmwareMap.id}`,vmwareMap)
+      .pipe(retry(2));
+  }
+
+  public deleteVmwareMap(vmwareMap: IVmwareMap): Observable<IVmwareMap[]> {
+    return this.http
+      .delete<IVmwareMap[]>(`${this.SERVER_URL}/vmware/${vmwareMap.id}`)
       .pipe(retry(2));
   }
 }

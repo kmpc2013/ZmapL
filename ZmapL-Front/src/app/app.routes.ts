@@ -4,6 +4,7 @@ import { HeaderComponent } from './modules/components/header/header.component';
 import { FooterComponent } from './modules/components/footer/footer.component';
 import { FortigateComponent } from './modules/pages/fortigate/fortigate.component';
 import { HomeComponent } from './modules/pages/home/home.component';
+import { VmwareComponent } from './modules/pages/vmware/vmware.component';
 
 export const routes: Routes = [
   {
@@ -17,5 +18,9 @@ export const routes: Routes = [
   {
     path: 'fortigate',
     component: FortigateComponent,
+  },
+  {
+    path: 'vmware',
+    component: VmwareComponent,
   },
 ];

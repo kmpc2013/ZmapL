@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { IVeeamMap } from '../../interface/IVeeamMap';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-veeam-edit',
@@ -44,15 +45,24 @@ export class VeeamEditComponent {
   }
 
   salvar() {
-    console.log(this.formGroup.value);
     this.veeamService.editVeeamMap(this.formGroup.value).subscribe({
       next: (addEntry) => {
-        console.log(this.formGroup.value);
-        window.location.reload();
-        alert('Editado com sucesso!');
+        Swal.fire({
+          title: 'Sucesso!',
+          text: 'Editado com sucesso!',
+          icon: 'success',
+          confirmButtonText: 'OK'
+        }).then(() => {
+          window.location.reload();
+        });
       },
       error: (error) => {
-        alert('Erro ao editar');
+        Swal.fire({
+          title: 'Erro!',
+          text: 'Erro ao editar',
+          icon: 'error',
+          confirmButtonText: 'OK'
+        });
       },
     });
   }

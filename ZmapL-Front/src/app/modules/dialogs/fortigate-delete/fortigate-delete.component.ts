@@ -6,6 +6,7 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
 import { BackService } from '../../services/back.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-fortigate-delete',
@@ -44,15 +45,24 @@ export class FortigateDeleteComponent {
   }
 
   salvar() {
-    console.log(this.formGroup.value);
     this.backService.deleteFortigateMap(this.formGroup.value).subscribe({
       next: (addEntry) => {
-        console.log(this.formGroup.value);
-        window.location.reload();
-        alert('Removido com sucesso!');
+        Swal.fire({
+          title: 'Sucesso!',
+          text: 'Removido com sucesso!',
+          icon: 'success',
+          confirmButtonText: 'OK'
+        }).then(() => {
+          window.location.reload();
+        });
       },
       error: (error) => {
-        alert('Erro ao remover');
+        Swal.fire({
+          title: 'Erro!',
+          text: 'Erro ao remover',
+          icon: 'error',
+          confirmButtonText: 'OK'
+        });
       },
     });
   }
