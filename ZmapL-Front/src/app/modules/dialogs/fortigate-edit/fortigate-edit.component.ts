@@ -51,7 +51,8 @@ export class FortigateEditComponent {
           title: 'Sucesso!',
           text: 'Editado com sucesso!',
           icon: 'success',
-          confirmButtonText: 'OK'
+          confirmButtonText: 'OK',
+          confirmButtonColor: '#3085d6'
         }).then(() => {
           window.location.reload();
         });
@@ -61,7 +62,8 @@ export class FortigateEditComponent {
           title: 'Erro!',
           text: 'Erro ao editar',
           icon: 'error',
-          confirmButtonText: 'OK'
+          confirmButtonText: 'OK',
+          confirmButtonColor: '#3085d6'
         });
       },
     });

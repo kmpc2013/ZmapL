@@ -46,7 +46,8 @@ export class FortigateCreateComponent {
           title: 'Sucesso!',
           text: 'Criado com sucesso!',
           icon: 'success',
-          confirmButtonText: 'OK'
+          confirmButtonText: 'OK',
+          confirmButtonColor: '#3085d6'
         }).then(() => {
           window.location.reload();
         });
@@ -56,7 +57,8 @@ export class FortigateCreateComponent {
           title: 'Erro!',
           text: 'Erro ao criar',
           icon: 'error',
-          confirmButtonText: 'OK'
+          confirmButtonText: 'OK',
+          confirmButtonColor: '#3085d6'
         });
       },
     });

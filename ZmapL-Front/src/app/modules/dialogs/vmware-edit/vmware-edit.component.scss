@@ -54,4 +54,17 @@ button {
   display: flex;
   margin: 15px;
   float: right;
+  &:focus {
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+div:where(.swal2-container) button:where(.swal2-styled):not([disabled]) {
+  &:focus {
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
 }

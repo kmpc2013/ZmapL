@@ -47,7 +47,7 @@ services:
           memory: 50M
   
   zmaplfront:
-    image: kmpc2013/zmaplfront:v2
+    image: kmpc2013/zmaplfront:v3
     container_name: zmaplfront
     restart: on-failure
     environment:

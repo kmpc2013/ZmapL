@@ -3,13 +3,11 @@
   width: 100%;
   height: 50px;
   margin-bottom: 15px;
-  background: linear-gradient(
-    90deg,
-    rgba(33, 73, 91, 1) 0%,
-    rgba(37, 44, 54, 1) 100%
-  );
+  background: #012562;
   align-items: center;
   justify-content: space-between;
+  font-weight: bold;
+  font-family: "Rubik", sans-serif;
 }
 
 .logo {
@@ -30,7 +28,7 @@
 }
 
 .nav a:hover {
-  color: #007bff;
+  color: #0EE7C5;
   cursor: pointer;
   text-decoration: none;
 }

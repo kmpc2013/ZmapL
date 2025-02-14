@@ -54,5 +54,10 @@
     display: flex;
     margin: 15px;
     float: right;
+    &:focus {
+      outline: none;
+      border: none;
+      cursor: pointer;
+    }
   }
   

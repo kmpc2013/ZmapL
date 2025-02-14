@@ -213,6 +213,7 @@ export class VeeamTableComponent {
   }
 
   search(e: Event) {
+    console.log('searching...')
     const target = e.target as HTMLInputElement;
     const value = target.value.toLowerCase();
 

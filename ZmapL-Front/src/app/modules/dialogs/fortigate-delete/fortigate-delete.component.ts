@@ -51,7 +51,8 @@ export class FortigateDeleteComponent {
           title: 'Sucesso!',
           text: 'Removido com sucesso!',
           icon: 'success',
-          confirmButtonText: 'OK'
+          confirmButtonText: 'OK',
+          confirmButtonColor: '#3085d6'
         }).then(() => {
           window.location.reload();
         });
@@ -61,7 +62,8 @@ export class FortigateDeleteComponent {
           title: 'Erro!',
           text: 'Erro ao remover',
           icon: 'error',
-          confirmButtonText: 'OK'
+          confirmButtonText: 'OK',
+          confirmButtonColor: '#3085d6'
         });
       },
     });

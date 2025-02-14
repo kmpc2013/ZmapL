@@ -40,10 +40,11 @@ export class VmwareTableComponent {
   }
 
   search(e: Event) {
+    console.log('searching...')
     const target = e.target as HTMLInputElement;
     const value = target.value.toLowerCase();
 
-    this.arrayVmwareFiltered = this.arrayVmwareFiltered.filter((item) => {
+    this.arrayVmwareFiltered = this.arrayVmwareALL.filter((item) => {
       return Object.values(item).some(
         (val) => typeof val === 'string' && val.toLowerCase().includes(value)
       );
