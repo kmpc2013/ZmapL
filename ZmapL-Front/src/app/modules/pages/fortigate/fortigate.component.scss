@@ -1,3 +1,5 @@
+@import '../../../../styles/variables.scss';
+
 .section-aba {
     display: flex;
     align-items: center;
@@ -15,4 +17,5 @@
     font-size: 2rem;
     font-family: 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
+    color: $branco-fumaca;
 }

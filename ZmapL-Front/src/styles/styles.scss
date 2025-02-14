@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  // background-image: url(´../../../assets/footer.png);
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  background: rgb(0,64,133);
+  background: linear-gradient(293deg, rgba(0,64,133,1) 0%, rgba(3,69,137,1) 18%, rgba(21,98,158,1) 21%, rgba(3,69,137,1) 44%, rgba(1,97,162,1) 45%, rgba(1,97,162,1) 45%, rgba(1,65,134,1) 82%, rgba(37,99,154,1) 84%, rgba(37,99,154,1) 85%); 
+}

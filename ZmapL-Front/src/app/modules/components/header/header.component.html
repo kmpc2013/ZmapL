@@ -1,12 +1,14 @@
 <header class="header">
-    <a class="logo" href="#">
-        <h1 href="">ZmapL</h1>
-    </a>
+    <div class="header__right-container">
+        <img src="../../../../assets/logo_sercompe.png" alt="Sercompe Logo" class="logo_img">
+        <a class="logo" routerLink="/">
+            <h1>ZmapL</h1>
+        </a>
+    </div>
     <div class="nav">
-        <a href="#">Home</a>
-        <a href="veeam">Veeam</a>
-        <a href="fortigate">FortiGate</a>
-        <a href="vmware">VMware</a>
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">INÍCIO</a>
+        <a routerLink="/veeam" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">VEEAM</a>
+        <a routerLink="/fortigate" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">FORTIGATE</a>
+        <a routerLink="/vmware" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">VMWARE</a>
     </div>
 </header>
-  
