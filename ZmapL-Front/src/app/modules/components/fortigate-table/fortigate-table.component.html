@@ -65,12 +65,14 @@
         <td>{{ item.LigeroService }}</td>
         <td>{{ item.ChangedAt | date : "d/MM/yy - H:mm:ss" }}</td>
         <td>
-          <button color="primary" class="btn btn-info" (click)="openDialogFortigateEdit(item)">
-            Editar
-          </button>
-          <button color="warn" class="btn btn-danger" (click)="openDialogFortigateDelete(item)">
-            Remover
-          </button>
+          <div class="button-group">
+            <button class="btn-edit" (click)="openDialogFortigateEdit(item)">
+              EDITAR
+            </button>
+            <button class="btn-danger" (click)="openDialogFortigateDelete(item)">
+              REMOVER
+            </button>
+          </div>
         </td>
       </tr>
     </tbody>

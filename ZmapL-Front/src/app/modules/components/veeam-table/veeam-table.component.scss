@@ -6,8 +6,8 @@
   .search-container {
     display: flex;
     align-items: center;
-    justify-content: space-between; 
-    gap: 8px; 
+    justify-content: space-between;
+    gap: 8px;
   }
 
   .inputSearch {
@@ -15,7 +15,7 @@
     border-radius: 5px;
     width: 600px;
     border: none;
-    margin-right: auto; 
+    margin-right: auto;
 
     &:focus {
       outline: none;
@@ -34,7 +34,7 @@
   }
 
   .buttomNewMap {
-    background-color: $branco-fumaca;
+    background-color: $turquesa-escuro;
     padding: 8px 22px;
     height: 40px;
     border-radius: 5px;
@@ -46,18 +46,18 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    white-space: nowrap; 
+    white-space: nowrap;
     border: none;
 
     &:hover {
-      background-color: $cinza-claro;
+      background-color: $turquesa-medio;
       opacity: 0.8;
       text-decoration: none;
     }
   }
 
   .buttomNewProced {
-    background-color: $turquesa-escuro;
+    background-color: $branco-fumaca;
     color: $branco-fumaca;
     padding: 8px 22px;
     height: 40px;
@@ -70,17 +70,16 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    white-space: nowrap; 
+    white-space: nowrap;
     border: none;
     text-decoration: none;
 
     &:hover {
-      background-color: $turquesa-medio;
+      background-color: $cinza-claro;
       opacity: 0.8;
       text-decoration: none;
     }
   }
-
 }
 
 .divTable {
@@ -107,8 +106,57 @@
   vertical-align: middle;
 
   button {
-    font-size: 14px;
-    padding: 2px 8px;
+    font-size: 12px;
+    padding: 4px 8px;
     margin: 5px;
+  }
+
+  .button-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .btn-edit {
+      background-color: $turquesa-escuro;
+      border-radius: 5px;
+      transition: background-color 0.4s ease-in-out, transform 0.3s ease-out;
+      color: $azul-escuro;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      white-space: nowrap;
+      border: none;
+  
+      &:hover {
+        background-color: $turquesa-medio;
+        opacity: 0.8;
+        text-decoration: none;
+      }
+    }
+  
+    .btn-danger {
+      background-color: red;
+      color: $branco-fumaca;
+      border-radius: 5px;
+      transition: background-color 0.4s ease-in-out, transform 0.3s ease-out;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      white-space: nowrap;
+      border: none;
+      text-decoration: none;
+  
+      &:hover {
+        background-color: rgb(219, 38, 38);
+        opacity: 0.8;
+        text-decoration: none;
+      }
+    }
   }
 }
