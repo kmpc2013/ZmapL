@@ -43,7 +43,7 @@ export class FortigateTableComponent {
     const target = e.target as HTMLInputElement;
     const value = target.value.toLowerCase();
 
-    this.arrayFortigateFiltered = this.arrayFortigateFiltered.filter((item) => {
+    this.arrayFortigateFiltered = this.arrayFortigateALL.filter((item) => {
       return Object.values(item).some(
         (val) => typeof val === 'string' && val.toLowerCase().includes(value)
       );
