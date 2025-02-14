@@ -5,6 +5,7 @@ import { MatDialogRef } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
 import { BackService } from '../../services/back.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-fortigate-create',
@@ -39,15 +40,26 @@ export class FortigateCreateComponent {
   }
 
   salvar() {
-    console.log(this.formGroup.value);
     this.backService.addFortigateMap(this.formGroup.value).subscribe({
       next: (addEntry) => {
-        console.log(this.formGroup.value);
-        window.location.reload();
-        alert('Cadastrado com sucesso!');
+        Swal.fire({
+          title: 'Sucesso!',
+          text: 'Criado com sucesso!',
+          icon: 'success',
+          confirmButtonText: 'OK',
+          confirmButtonColor: '#3085d6'
+        }).then(() => {
+          window.location.reload();
+        });
       },
       error: (error) => {
-        alert('Erro ao cadastrar');
+        Swal.fire({
+          title: 'Erro!',
+          text: 'Erro ao criar',
+          icon: 'error',
+          confirmButtonText: 'OK',
+          confirmButtonColor: '#3085d6'
+        });
       },
     });
   }

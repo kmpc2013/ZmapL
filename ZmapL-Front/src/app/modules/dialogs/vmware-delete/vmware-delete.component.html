@@ -1,0 +1,58 @@
+<header>
+  <h2 mat-dialog-title class="Title">Removendo Mapeamento</h2>
+  <button (click)="closeModal()">
+    <img
+      class="closeButton"
+      src="assets/icons/close.svg"
+      alt="Botão para fechar o dialogo"
+      height="20px"
+      width="20px"
+    />
+  </button>
+</header>
+<a>Deseja remover o mapeamento abaixo?</a>
+<form [formGroup]="formGroup" (ngSubmit)="salvar()">
+  <div class="formDiv">
+    <table>
+      <tr>
+        <td class="formName">ID:</td>
+        <td class="formData">
+          {{ getData()!.id }}
+        </td>
+      </tr>
+      <tr>
+        <td class="formName">Client VMware Folder:</td>
+        <td class="formData">
+          {{ getData()!.ClientVmwareFolder }}
+        </td>
+      </tr>
+      <tr>
+        <td class="formName">Ligero Customer ID:</td>
+        <td class="formData">
+          {{ getData()!.LigeroCustomerId }}
+        </td>
+      </tr>
+      <tr>
+        <td class="formName">Ligero E-mail:</td>
+        <td class="formData">
+          {{ getData()!.LigeroEmail }}
+        </td>
+      </tr>
+      <tr>
+        <td class="formName">Ligero Serviço:</td>
+        <td class="formData">
+          {{ getData()!.LigeroService }}
+        </td>
+      </tr>
+    </table>
+  </div>
+  <button
+    mat-raised-button
+    type="button"
+    class="btn btn-outline-primary"
+    [disabled]="!formGroup.valid"
+    (click)="salvar()"
+  >
+    Sim
+  </button>
+</form>

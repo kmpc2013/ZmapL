@@ -6,6 +6,7 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
 import { BackService } from '../../services/back.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-fortigate-edit',
@@ -44,15 +45,26 @@ export class FortigateEditComponent {
   }
 
   salvar() {
-    console.log(this.formGroup.value);
     this.backService.editFortigateMap(this.formGroup.value).subscribe({
       next: (addEntry) => {
-        console.log(this.formGroup.value);
-        window.location.reload();
-        alert('Editado com sucesso!');
+        Swal.fire({
+          title: 'Sucesso!',
+          text: 'Editado com sucesso!',
+          icon: 'success',
+          confirmButtonText: 'OK',
+          confirmButtonColor: '#3085d6'
+        }).then(() => {
+          window.location.reload();
+        });
       },
       error: (error) => {
-        alert('Erro ao editar');
+        Swal.fire({
+          title: 'Erro!',
+          text: 'Erro ao editar',
+          icon: 'error',
+          confirmButtonText: 'OK',
+          confirmButtonColor: '#3085d6'
+        });
       },
     });
   }

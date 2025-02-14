@@ -28,8 +28,7 @@ services:
           memory: 50M
 
   zmaplback:
-    # build: ./ZmapL-Back
-    image: kmpc2013/zmaplback:v2
+    image: kmpc2013/zmaplback:v3
     container_name: zmaplback
     restart: on-failure
     environment:
@@ -48,8 +47,7 @@ services:
           memory: 50M
   
   zmaplfront:
-    # build: ./ZmapL-Front
-    image: kmpc2013/zmaplfront:v2
+    image: kmpc2013/zmaplfront:v3
     container_name: zmaplfront
     restart: on-failure
     environment:

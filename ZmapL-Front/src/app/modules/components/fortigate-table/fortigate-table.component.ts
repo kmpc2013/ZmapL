@@ -55,12 +55,10 @@ export class FortigateTableComponent {
       this.key = key;
       this.reverse = !this.reverse;
       if (this.reverse == true) {
-        console.log('normal');
         this.arrayFortigateFiltered.sort(function (a, b) {
           return a.id < b.id ? -1 : a.id > b.id ? 1 : 0;
         });
       } else if (this.reverse == false) {
-        console.log('reverse');
         this.arrayFortigateFiltered
           .sort(function (a, b) {
             return a.id < b.id ? -1 : a.id > b.id ? 1 : 0;
@@ -156,7 +154,6 @@ export class FortigateTableComponent {
           .reverse();
       }
     } else {
-      console.log('sortTable');
       this.arrayFortigateFiltered.sort(function (a, b) {
         return a.id < b.id ? -1 : a.id > b.id ? 1 : 0;
       });

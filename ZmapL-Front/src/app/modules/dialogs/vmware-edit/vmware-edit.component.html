@@ -1,0 +1,81 @@
+<header>
+  <h2 mat-dialog-title class="Title">Editando Mapeamento</h2>
+  <button (click)="closeModal()">
+    <img
+      class="closeButton"
+      src="assets/icons/close.svg"
+      alt="Botão para fechar o dialogo"
+      height="20px"
+      width="20px"
+    />
+  </button>
+</header>
+<form [formGroup]="formGroup" (ngSubmit)="salvar()">
+<div class="formDiv">
+  <table>
+    <tr>
+      <td class="formName">clientVmwareFolder:</td>
+      <td>
+        <input
+          class="formInput"
+          formControlName="clientVmwareFolder"
+          placeholder="Client VMware Folder 01, ..."
+          type="text"
+          maxlength="200"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td class="formName">Ligero Customer ID:</td>
+      <td>
+        <input
+          class="formInput"
+          formControlName="ligeroCustomerId"
+          placeholder="CUSTOMER ID 01"
+          type="text"
+          maxlength="45"
+          required
+        />
+      </td>
+      <td class="requiredIcon">*</td>
+    </tr>
+    <tr>
+      <td class="formName">Ligero E-mail:</td>
+      <td>
+        <input
+          class="formInput"
+          formControlName="ligeroEmail"
+          placeholder="user@cliente.com.br"
+          type="text"
+          maxlength="45"
+          required
+        />
+      </td>
+      <td class="requiredIcon">*</td>
+    </tr>
+    <tr>
+      <td class="formName">Ligero Serviço:</td>
+      <td>
+        <input
+          class="formInput"
+          formControlName="ligeroService"
+          placeholder="VMware"
+          type="text"
+          maxlength="45"
+          required
+        />
+      </td>
+      <td class="requiredIcon">*</td>
+    </tr>
+  </table>
+</div>
+<button
+  mat-raised-button
+  type="button"
+  class="btn btn-outline-primary"
+  [disabled]="!formGroup.valid"
+  (click)="salvar()"
+>
+  Save
+</button>
+</form>

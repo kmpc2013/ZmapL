@@ -1,33 +1,31 @@
-<app-header />
+<app-header></app-header>
+
 <div class="container">
   <div class="title">
-    <h1>Zabbix mapping to Ligero</h1>
+    <h1>Zabbix Mapping to Ligero</h1>
   </div>
   <div class="subtitle">
-    <a>
-      Mapeando eventos de um mesmo host no Zabbix para abrir ticket com
-      diferentes caracteristicas
-    </a>
+    <p>
+      Mapeando eventos de um mesmo host no Zabbix para abrir tickets com diferentes características.
+    </p>
   </div>
+
   <div class="links">
-    <table>
-      <tr>
-        <a href="veeam" class="entry">
-          <td>
-            <img src="assets/veeam_logo_800x800.png" />
-            <a>Veeam</a>
-          </td>
-        </a>
-      </tr>
-      <tr>
-        <a href="fortigate" class="entry">
-          <td>
-            <img src="assets/fortigate_logo_1537x1101.png" />
-            <a>FortiGate</a>
-          </td>
-        </a>
-      </tr>
-    </table>
+    <div class="card" onclick="location.href='veeam';">
+      <img src="assets/veeam_logo_800x800.png" alt="Veeam" />
+      <span>Veeam</span>
+    </div>
+
+    <div class="card" onclick="location.href='fortigate';">
+      <img src="assets/fortigate_logo_1537x1101.png" alt="FortiGate" />
+      <span>FortiGate</span>
+    </div>
+
+    <div class="card" onclick="location.href='vmware';">
+      <img src="assets/vmware_vsphere_logo_800x800.png" alt="VMware" />
+      <span>VMware</span>
+    </div>
   </div>
 </div>
-<app-footer />
+
+<app-footer></app-footer>

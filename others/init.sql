@@ -23,3 +23,13 @@ CREATE TABLE
         LigeroService VARCHAR(45) NOT NULL,
         ChangedAt VARCHAR(45) NOT NULL
     );
+
+CREATE TABLE
+    vmware (
+        id INT PRIMARY KEY AUTO_INCREMENT,
+        ClientVmwareFolder VARCHAR(200),
+        LigeroCustomerId VARCHAR(45) NOT NULL,
+        LigeroEmail VARCHAR(45) NOT NULL,
+        LigeroService VARCHAR(45) NOT NULL,
+        ChangedAt VARCHAR(45) NOT NULL
+    );

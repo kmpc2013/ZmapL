@@ -1,68 +1,85 @@
-html,
-body {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Container principal */
 .container {
   text-align: center;
-  border: 1px solid #ccc;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  margin: 1rem;
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: auto;
 }
 
+/* Títulos */
 .title h1 {
-  margin: 0;
-  font-size: 2rem;
-  padding-bottom: 1rem;
-}
-
-.subtitle {
-  padding-bottom: 2rem;
-}
-
-.subtitle a {
-  text-decoration: none;
+  font-size: 2.5rem;
   color: #333;
-  font-size: 1.2rem;
+  margin-bottom: 10px;
 }
 
+.subtitle p {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 18px;
+  margin-bottom: 80px;
+}
+
+/* Estilizando os links como cartões */
 .links {
   display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 220px;
+  height: 220px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
 }
 
-.links table {
-  border-collapse: separate;
-  border-spacing: 0.5rem; 
+.card img {
+  width: 80px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
 }
 
-.links img {
-  vertical-align: middle;
-  max-height: 3rem;
-  max-width: 3rem;
-  padding: 1rem 0.5rem 1rem 0.5rem;
+.card span {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #333;
 }
 
-.entry {
-    text-decoration: none;
+/* Efeito de hover nos cartões */
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
 }
 
-.entry td {
-  background-color: #ccc;
-  border-radius: 5px;
-  &:hover {
-    background-color: #a3a3a3;
+.card:hover img {
+  transform: scale(1.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .links {
+    flex-direction: column;
+    align-items: center;
   }
-}
-
-.entry td a {
-  color: #007bff;
-  margin: 15px;
-  font-size: 1rem;
 }

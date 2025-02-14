@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { IVeeamMap } from '../../interface/IVeeamMap';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-veeam-delete',
@@ -44,15 +45,26 @@ export class VeeamDeleteComponent {
   }
 
   salvar() {
-    console.log(this.formGroup.value);
     this.veeamService.deleteVeeamMap(this.formGroup.value).subscribe({
       next: (addEntry) => {
-        console.log(this.formGroup.value);
-        window.location.reload();
-        alert('Removido com sucesso!');
+        Swal.fire({
+          title: 'Sucesso!',
+          text: 'Removido com sucesso!',
+          icon: 'success',
+          confirmButtonText: 'OK',
+          confirmButtonColor: '#3085d6'
+        }).then(() => {
+          window.location.reload();
+        });
       },
       error: (error) => {
-        alert('Erro ao remover');
+        Swal.fire({
+          title: 'Erro!',
+          text: 'Erro ao remover',
+          icon: 'error',
+          confirmButtonText: 'OK',
+          confirmButtonColor: '#3085d6'
+        });
       },
     });
   }

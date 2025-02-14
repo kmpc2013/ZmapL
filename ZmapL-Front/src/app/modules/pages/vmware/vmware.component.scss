@@ -1,0 +1,18 @@
+.section-aba {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-aba img {
+vertical-align: middle;
+max-height: 5rem;
+max-width: 5rem;
+padding: 1rem 0.5rem 1rem 0.5rem;
+}
+
+.section-aba h1 {
+  margin-top: 20px;
+  font-size: 2rem;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+}
