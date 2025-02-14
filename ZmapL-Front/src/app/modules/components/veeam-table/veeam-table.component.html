@@ -75,12 +75,14 @@
         <td>{{ item.LigeroService }}</td>
         <td>{{ item.ChangedAt | date : "d/MM/yy - H:mm:ss" }}</td>
         <td>
-          <button class="btn btn-info" (click)="openDialogVeeamEdit(item)">
-            Editar
-          </button>
-          <button color="warn" class="btn btn-danger" (click)="openDialogVeeamDelete(item)">
-            Remover
-          </button>
+          <div class="button-group">
+            <button class="btn-edit" (click)="openDialogVeeamEdit(item)">
+              EDITAR
+            </button>
+            <button class="btn-danger" (click)="openDialogVeeamDelete(item)">
+              REMOVER
+            </button>
+          </div>
         </td>
       </tr>
     </tbody>
